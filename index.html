@@ -57,14 +57,15 @@ body.yzp-standalone{margin:0;background:#fff}
 #yzp .motto{font-size:clamp(18px,2.4vw,23px);font-style:italic;max-width:620px;opacity:.95;margin:18px 0 30px;
   border-left:4px solid var(--yellow);padding-left:16px}
 #yzp .who{font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:15px;margin-bottom:12px}
-#yzp .roles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:760px}
+#yzp .roles{align-items:stretch;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:760px}
 #yzp .role{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.35);border-radius:5px;color:#fff;
-  padding:14px 12px 12px;text-align:left;transition:background .2s,transform .2s,border-color .2s;backdrop-filter:blur(3px)}
-#yzp .role:hover{background:rgba(255,255,255,.2);transform:translateY(-3px)}
+  padding:14px 12px 12px;text-align:left;display:flex;flex-direction:column;justify-content:flex-start;transition:background .2s,transform .2s,border-color .2s;backdrop-filter:blur(3px)}
+@media(hover:hover){#yzp .role:hover{background:rgba(255,255,255,.2);transform:translateY(-3px)}
+#yzp .role[aria-pressed="true"]:hover{background:#fff}}
 #yzp .role[aria-pressed="true"]{background:#fff;color:var(--navy);border-color:#fff}
 #yzp .role svg{width:26px;height:26px;display:block;margin-bottom:8px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 #yzp .role strong{font-family:var(--head);font-size:21px;text-transform:uppercase;display:block;line-height:1}
-#yzp .role span{font-size:12.5px;opacity:.85}
+#yzp .role span{font-size:12.5px;opacity:.85;line-height:1.35;display:block;margin-top:4px;min-height:2.7em}
 
 /* açılış: tek, kademeli giriş */
 @keyframes yzp-rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
@@ -83,7 +84,10 @@ body.yzp-standalone{margin:0;background:#fff}
 #yzp .bar{height:3px;background:linear-gradient(90deg,var(--navy),var(--blue),var(--yellow),var(--red));transform-origin:left;transform:scaleX(0)}
 
 /* ---------- SHORTCUTS ---------- */
-#yzp .short{background:var(--wash);border-bottom:1px solid var(--line);padding:22px 0;display:none}
+#yzp .short{scroll-margin-top:calc(var(--sticky-top) + 52px);background:var(--wash);border-bottom:1px solid var(--line);padding:22px 0;display:none}
+#yzp section .short{border:1px solid var(--line);border-left:6px solid var(--yellow);border-radius:5px;margin:4px 0 26px;padding:16px 0 18px}
+#yzp section.alt .short{background:#fff}
+#yzp section .short .wrap{padding:0 18px}
 #yzp .short.show{display:block;animation:yzp-rise .45s ease-out}
 #yzp .short h3{font-size:22px;text-transform:uppercase;margin-bottom:12px}
 #yzp .short h3 em{font-style:normal;color:var(--red)}
@@ -754,7 +758,7 @@ $$('.role').forEach(function(b){b.addEventListener('click',function(){var r=b.da
   $('#yzp-short-t').textContent='kısayollar · '+S[0];
   $('#yzp-short-c').innerHTML=S[1].map(function(c){return '<a href="'+c[0]+'"><b>'+c[1]+'</b><span>'+c[2]+'</span></a>'}).join('');
   var sh=$('#yzp-short');sh.classList.remove('show');void sh.offsetWidth;sh.classList.add('show');
-  sh.scrollIntoView({behavior:'smooth',block:'start'})})});
+  var sec=$('#yzp-'+r),h=$('h2',sec);h.parentNode.insertBefore(sh,h.nextSibling);var nv=$('.nav'),y=sec.getBoundingClientRect().top+window.scrollY-nv.offsetHeight-(parseInt(getComputedStyle(R).getPropertyValue('--sticky-top'))||0)+8;window.scrollTo({top:y,behavior:'smooth'})})});
 
 /* ---------- yumuşak kaydırma, etkin bölüm, ilerleme ---------- */
 R.addEventListener('click',function(e){var a=e.target.closest('a[href^="#yzp-"]');if(!a)return;var t=document.querySelector(a.getAttribute('href'));if(!t)return;
