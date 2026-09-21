@@ -425,6 +425,11 @@ body.yzp-standalone{margin:0;background:#fff}
   <h3 class="sub rv">Ödev Teslimi Öncesi Altın Kural</h3>
   <div class="note rv"><p>Her öğrenci, bir çalışmayı teslim etmeden önce aşağıdaki kısa kontrol listesini gözden geçirmeli ve yapay zekâ kullanımını ödevinin sonunda açıkça beyan etmelidir. <strong>Beyan edilmiş dürüst kullanım ceza konusu değildir;</strong> beyan edilmeyen kullanım ise akademik dürüstlük kapsamında değerlendirilir.</p></div>
 
+  <div class="note red rv" id="yzp-yasak" style="scroll-margin-top:calc(var(--sticky-top) + 80px)"><h4>✗ Her Düzeyde Yasak Olan Kullanımlar</h4>
+    <p>Seçilen kullanım düzeyi ne olursa olsun aşağıdakiler her zaman yasaktır ve doğrudan <strong>akademik dürüstlük veya veri güvenliği ihlali</strong> kabul edilir:</p>
+    <ul class="ban"><li>Sınavlarda ve anlık değerlendirmelerde yapay zekâ kullanmak</li><li>Sınav sorularını, gizli okul materyallerini veya kişisel/gizli verileri sisteme girmek</li><li>Yapay zekâ çıktısını kendi özgün eseri gibi sunmak</li><li>Zorbalık, deepfake veya yaşa uygunsuz içerik üretmek</li><li>Öğretmenin açıkça yasakladığı görevlerde yapay zekâ kullanmak</li></ul>
+  </div>
+
   <div class="gen">
     <div class="rv">
       <div class="out-h"><span>EK 1 · Teslim öncesi kontrol listesi</span></div>
@@ -463,19 +468,16 @@ body.yzp-standalone{margin:0;background:#fff}
       <div class="meter" id="yzp-lv-m" aria-hidden="true"><i style="height:25%"></i><i style="height:50%"></i><i style="height:75%"></i><i style="height:100%"></i></div>
     </div>
   </div>
-  <div class="note red rv"><h4>✗ Her Düzeyde Yasak Olan Kullanımlar</h4>
-    <p>Seçilen kullanım düzeyi ne olursa olsun aşağıdakiler her zaman yasaktır ve doğrudan <strong>akademik dürüstlük veya veri güvenliği ihlali</strong> kabul edilir:</p>
-    <ul class="ban"><li>Sınavlarda ve anlık değerlendirmelerde yapay zekâ kullanmak</li><li>Sınav sorularını, gizli okul materyallerini veya kişisel/gizli verileri sisteme girmek</li><li>Yapay zekâ çıktısını kendi özgün eseri gibi sunmak</li><li>Zorbalık, deepfake veya yaşa uygunsuz içerik üretmek</li><li>Öğretmenin açıkça yasakladığı görevlerde yapay zekâ kullanmak</li></ul>
-  </div>
+  <div class="note red rv" style="padding:12px 22px"><p><strong>Hatırlatma:</strong> Hangi düzey seçilirse seçilsin, <a href="#yzp-yasak" style="color:var(--red);font-weight:700">Her Düzeyde Yasak Olan Kullanımlar</a> geçerlidir.</p></div>
 
-  <h3 class="sub rv">Ödev Yönergesi Oluşturucu <span class="tiny" style="font-family:var(--body);text-transform:none;letter-spacing:0">· EK 4 şablonu</span></h3>
+  <h3 class="sub rv">Ödev Yönergesi Yardımcısı</h3>
+  <p class="rv">Her dersin başında ve ödev yönergelerinde yapay zekâ kullanım sınırları duyurulur. Yukarıda seçtiğiniz düzeyi görev kâğıdına eklemek için aşağıdaki metni kullanabilirsiniz.</p>
   <div class="gen rv">
     <div>
       <div class="field"><label for="yzp-y-ders">Ders / Sınıf</label><input id="yzp-y-ders" placeholder="ör. Türk Dili ve Edebiyatı · 10-A"></div>
       <div class="field"><label for="yzp-y-odev">Çalışmanın adı</label><input id="yzp-y-odev" placeholder="ör. Roman inceleme raporu"></div>
       <div class="field"><label>Düzey</label><p class="tiny" style="margin:0">Yukarıdaki düzey seçicisinden belirlenir: <strong id="yzp-y-lv" style="color:var(--navy)"></strong></p></div>
-      <div class="field"><label>Kullanım beyanı</label>
-        <div class="seg" id="yzp-y-b" style="margin:0"><button data-b="1" aria-pressed="true">Zorunludur</button><button data-b="0" aria-pressed="false">Gerekli değildir</button></div></div>
+      
     </div>
     <div>
       <div class="out printable" id="yzp-y-out"></div>
@@ -532,7 +534,7 @@ body.yzp-standalone{margin:0;background:#fff}
       <p>Kurumsal uygulamalarımız MEB'in ilgili politika belgesi ve etik kılavuzundaki ilkeler doğrultusunda yürütülür; bu belgelerdeki güncellemeler politika revizyonlarımıza yansıtılır.</p>
     </div>
     <div class="rv">
-      <div class="note yel" style="margin-top:0"><h4>Dijital İyi Oluş</h4><p>Yapay zekâ kullanımı yalnızca akademik bir konu değil; öğrencinin öz güveni, dikkat becerileri ve psikolojik sağlamlığıyla da doğrudan bağlantılıdır. Öğrencilerimizin teknolojiye aşırı bağımlılık geliştirmemesi ve <strong>kendi zihinlerine güvenmeyi sürdürmesi</strong> hedeflenir.</p></div>
+      <div class="note yel" style="margin-top:0"><h4>Dijital İyi Oluş</h4><p>Yapay zekâ kullanımı yalnızca akademik bir konu değil; öğrencinin özgüveni, dikkat becerileri ve psikolojik sağlamlığıyla da doğrudan bağlantılıdır. Öğrencilerimizin teknolojiye aşırı bağımlılık geliştirmemesi ve <strong>kendi zihinlerine güvenmeyi sürdürmesi</strong> hedeflenir.</p></div>
       <div class="note red"><h4>Deepfake ve Sahte İçerik</h4><p>Yapay zekâ ile görsel, ses veya video üretimi yalnızca eğitimsel ve etik amaçlarla yapılabilir. Bir kişinin izni olmadan görselini değiştirmek, sahte ses/görüntü üretmek, okul topluluğundaki bireyleri küçük düşürücü içerikler oluşturmak ve deepfake üretmek <strong>kesinlikle yasaktır ve ağır disiplin suçudur.</strong></p></div>
     </div>
   </div>
@@ -557,7 +559,7 @@ body.yzp-standalone{margin:0;background:#fff}
 
 <!-- ================= 8 + EKLER ================= -->
 <section id="yzp-ekler"><div class="wrap">
-  <div class="kick rv">Bölüm 8 · Ekler</div>
+  <div class="kick rv">Bölüm 8–9</div>
   <h2 class="rv">İzleme, Değerlendirme ve <b>Güncelleme</b></h2>
   <p class="lead rv">Bu politika statik bir kural seti değil, <strong>yaşayan bir dokümandır.</strong> Uygulanması ve güncelliği; öğretmen geri bildirimleri, akademik dürüstlük kayıtları ve teknoloji kullanım değerlendirmeleri yoluyla izlenir. Okul yönetimi ve bilişim teknolojileri bölümü tarafından her eğitim-öğretim yılı başında gözden geçirilerek güncellenir.</p>
   <div class="stats rv">
@@ -565,7 +567,9 @@ body.yzp-standalone{margin:0;background:#fff}
     <div><b>Her Yıl</b><span>Politika gözden geçirme ve güncelleme döngüsü</span></div>
     <div><b>5 Düzey</b><span>Ödevlerde şeffaf yapay zekâ kullanım çerçevesi (Düzey 0–4)</span></div>
   </div>
-  <h3 class="sub rv">EK 3 · Dayanak ve İlgili Mevzuat</h3>
+  <h3 class="sub rv">Ekler: Hızlı Başvuru Rehberleri</h3>
+  <p class="rv">EK 1 (öğrenci kontrol listesi) <a href="#yzp-check">Öğrenciler</a> ve EK 2 (veli soru rehberi) <a href="#yzp-pq">Veliler</a> bölümünde etkileşimli olarak yer alır.</p>
+  <h3 class="sub rv" style="margin-top:26px;font-size:23px">EK 3 · Dayanak ve İlgili Mevzuat</h3>
   <ul class="refs rv"><li>6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK)</li><li>MEB, Eğitimde Yapay Zekâ Politika Belgesi ve Eylem Planı (2025–2029)</li><li>MEB, Eğitimde Yapay Zekâ Uygulamaları Etik Kılavuzu</li><li>MEB Okul Öncesi Eğitim ve İlköğretim Kurumları Yönetmeliği (ilgili hükümler)</li><li>MEB Ortaöğretim Kurumları Yönetmeliği (ödül ve disipline ilişkin ilgili hükümler)</li><li>UNESCO, Eğitim ve Araştırmada Üretken Yapay Zekâ Rehberi</li></ul>
 </div></section>
 
@@ -652,7 +656,7 @@ var STEPS=[
  ['Tekrarlanan İhlaller','İhlalin tekrarlanması veya iyi niyetin suistimal edilmesi durumunda konu, rehberlik servisi ve okul yönetimi ile paylaşılır; ilgili disiplin süreçleri, kademeye göre MEB Okul Öncesi Eğitim ve İlköğretim Kurumları Yönetmeliği ile MEB Ortaöğretim Kurumları Yönetmeliği\'nin ödül ve disipline ilişkin hükümleri çerçevesinde yürütülür.']];
 var SHORT={
  ogrenci:['Öğrenciler',[['#yzp-grade','Sınıfına göre çerçeve','Kademene uygun kullanım ilkesi'],['#yzp-tl-q','Bunu yapabilir miyim?','Uygun · dikkatli · yasak kullanımlar'],['#yzp-check','Teslim öncesi kontrol','6 soruluk liste ve beyan yardımcısı']]],
- ogretmen:['Öğretmenler',[['#yzp-lvbox','Kullanım düzeyleri 0–4','Beklentinizi netleştirin'],['#yzp-y-ders','Ödev yönergesi oluşturucu','Kopyalayın ya da yazdırın'],['#yzp-durustluk','İhlal şüphesinde süreç','Eğitici ve düzeltici dört adım']]],
+ ogretmen:['Öğretmenler',[['#yzp-lvbox','Kullanım düzeyleri 0–4','Beklentinizi netleştirin'],['#yzp-y-ders','Ödev yönergesi yardımcısı','Kopyalayın ya da yazdırın'],['#yzp-durustluk','İhlal şüphesinde süreç','Eğitici ve düzeltici dört adım']]],
  veli:['Veliler',[['#yzp-pq','Yönlendirici sorular','Cevap vermek yerine soru sorun'],['#yzp-dd','Evde yaklaşımlar','Destekleyin · kaçının'],['#yzp-durustluk','İtiraz hakkı ve süreç','Akademik dürüstlük değerlendirmesi']]],
  yonetim:['Yönetim',[['#yzp-yonetim','Veri güvenliği ve iyi oluş','Onaylı araçlar, privacy-by-design'],['#yzp-durustluk','Kanıt ilkesi ve itiraz','Detektör çıktısı tek başına kanıt değildir'],['#yzp-ekler','İzleme ve mevzuat','Yıllık güncelleme döngüsü']]]};
 
@@ -726,8 +730,8 @@ function drawLv(){var L=LEVELS[cur];$('#yzp-lvbox').style.setProperty('--lc',L.c
   $$('#yzp-lv-m i').forEach(function(m,j){m.className=j<=cur-1?'f':''});yon()}
 function yon(){var L=LEVELS[cur],d=$('#yzp-y-ders').value.trim(),o=$('#yzp-y-odev').value.trim();
   $('#yzp-y-lv').textContent='Düzey '+cur+' · '+L.n;
-  $('#yzp-y-out').textContent=(d?d+'\n':'')+(o?o+'\n':'')+((d||o)?'\n':'')+'BU ÇALIŞMADA YAPAY ZEKÂ KULLANIMI\n\n☑ DÜZEY '+cur+' · '+L.n+'\n'+L.p.replace('Bu çalışmada yapay','Yapay').replace('; ancak nihai','; nihai')+'\n\nKullanım Beyanı: '+(beyan?'☑ Zorunludur':'☑ Gerekli değildir')+'\n\nHatırlatma: Hangi düzey seçilirse seçilsin, “Her Düzeyde Yasak Olan Kullanımlar” bölümündeki kurallar geçerlidir.'}
-segInit($('#yzp-y-b'),function(b){beyan=+b.dataset.b;yon()});
+  $('#yzp-y-out').textContent=(d?d+'\n':'')+(o?o+'\n':'')+((d||o)?'\n':'')+'BU ÇALIŞMADA YAPAY ZEKÂ KULLANIMI\n\nDÜZEY '+cur+' · '+L.n+'\n'+L.p+(cur>0?'\n\nYapay zekâ kullanımı, ödevin sonunda açıkça beyan edilmelidir.':'')+'\n\nHatırlatma: Hangi düzey seçilirse seçilsin, “Her Düzeyde Yasak Olan Kullanımlar” bölümündeki kurallar geçerlidir.'}
+
 ['yzp-y-ders','yzp-y-odev'].forEach(function(id){document.getElementById(id).addEventListener('input',yon)});drawLv();
 $('#yzp-y-print').addEventListener('click',function(){document.body.classList.add('yzp-print');window.print();setTimeout(function(){document.body.classList.remove('yzp-print')},500)});
 
