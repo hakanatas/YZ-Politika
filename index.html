@@ -108,7 +108,7 @@ body.yzp-standalone{margin:0;background:#fff}
 #yzp h2 b{font-weight:700;color:var(--navy)}
 #yzp h2 b.r{color:var(--red)}
 #yzp h3.sub{font-size:27px;text-transform:uppercase;color:var(--navy);margin:44px 0 12px}
-#yzp .lead{font-size:17.5px;max-width:820px;color:#2c3444}
+#yzp .lead{font-size:17.5px;color:#2c3444}
 #yzp .cols{display:grid;grid-template-columns:1fr 1fr;gap:26px}
 #yzp .note{background:var(--t-navy);border-left:6px solid var(--navy);padding:18px 22px;border-radius:0 5px 5px 0;margin:22px 0}
 #yzp .note.red{background:var(--t-red);border-left-color:var(--red)}
@@ -117,6 +117,7 @@ body.yzp-standalone{margin:0;background:#fff}
 #yzp .note.red h4{color:var(--red)}
 #yzp .note p:last-child{margin:0}
 #yzp .quote{font-size:clamp(19px,2.3vw,24px);font-style:italic;color:var(--navy)}
+#yzp section p a{color:var(--blue);font-weight:600}
 #yzp ul.dots{list-style:none;padding:0;margin:0}
 #yzp ul.dots li{position:relative;padding:0 0 10px 22px}
 #yzp ul.dots li::before{content:"";position:absolute;left:0;top:.55em;width:10px;height:10px;background:var(--yellow)}
@@ -262,7 +263,7 @@ body.yzp-standalone{margin:0;background:#fff}
 #yzp .stats div{border-top:5px solid var(--yellow);background:#fff;padding:18px;border-radius:0 0 5px 5px;box-shadow:0 8px 22px rgba(22,41,90,.06)}
 #yzp .stats b{font-family:var(--head);font-weight:300;font-size:52px;line-height:1;color:var(--navy);display:block}
 #yzp .stats span{font-size:14.5px;color:var(--muted)}
-#yzp .refs{list-style:none;margin:0;padding:0;columns:2;column-gap:26px}
+#yzp .refs{list-style:none;margin:0;padding:0}
 #yzp .refs li{break-inside:avoid;padding:9px 0 9px 22px;border-bottom:1px solid var(--line);position:relative;font-size:15px}
 #yzp .refs li::before{content:"";position:absolute;left:0;top:1.05em;width:10px;height:10px;background:var(--yellow)}
 #yzp .end{background:var(--navy-d);color:#fff;text-align:center;padding:64px 0 0;position:relative;overflow:hidden}
@@ -280,7 +281,7 @@ body.yzp-standalone{margin:0;background:#fff}
 @media(max-width:860px){
   #yzp .roles{grid-template-columns:1fr 1fr}
   #yzp .cols,#yzp .gen,#yzp .dd,#yzp .short .cards{grid-template-columns:1fr}
-  #yzp .refs{columns:1}
+  
   #yzp .stage{grid-template-columns:1fr;gap:8px}
   #yzp .lv button b{font-size:32px} #yzp .lv button span{display:none}
   #yzp .lv-panel{grid-template-columns:1fr}
@@ -559,7 +560,7 @@ body.yzp-standalone{margin:0;background:#fff}
 
 <!-- ================= 8 + EKLER ================= -->
 <section id="yzp-ekler"><div class="wrap">
-  <div class="kick rv">Bölüm 8–9</div>
+  <div class="kick rv">Bölüm 8</div>
   <h2 class="rv">İzleme, Değerlendirme ve <b>Güncelleme</b></h2>
   <p class="lead rv">Bu politika statik bir kural seti değil, <strong>yaşayan bir dokümandır.</strong> Uygulanması ve güncelliği; öğretmen geri bildirimleri, akademik dürüstlük kayıtları ve teknoloji kullanım değerlendirmeleri yoluyla izlenir. Okul yönetimi ve bilişim teknolojileri bölümü tarafından her eğitim-öğretim yılı başında gözden geçirilerek güncellenir.</p>
   <div class="stats rv">
@@ -567,7 +568,8 @@ body.yzp-standalone{margin:0;background:#fff}
     <div><b>Her Yıl</b><span>Politika gözden geçirme ve güncelleme döngüsü</span></div>
     <div><b>5 Düzey</b><span>Ödevlerde şeffaf yapay zekâ kullanım çerçevesi (Düzey 0–4)</span></div>
   </div>
-  <h3 class="sub rv">Ekler: Hızlı Başvuru Rehberleri</h3>
+  <div class="kick rv" style="margin-top:56px">Ekler</div>
+  <h2 class="rv" style="font-size:clamp(28px,4vw,42px)">Hızlı Başvuru <b class="r">Rehberleri</b></h2>
   <p class="rv">EK 1 (öğrenci kontrol listesi) <a href="#yzp-check">Öğrenciler</a> ve EK 2 (veli soru rehberi) <a href="#yzp-pq">Veliler</a> bölümünde etkileşimli olarak yer alır.</p>
   <h3 class="sub rv" style="margin-top:26px;font-size:23px">EK 3 · Dayanak ve İlgili Mevzuat</h3>
   <ul class="refs rv"><li>6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK)</li><li>MEB, Eğitimde Yapay Zekâ Politika Belgesi ve Eylem Planı (2025–2029)</li><li>MEB, Eğitimde Yapay Zekâ Uygulamaları Etik Kılavuzu</li><li>MEB Okul Öncesi Eğitim ve İlköğretim Kurumları Yönetmeliği (ilgili hükümler)</li><li>MEB Ortaöğretim Kurumları Yönetmeliği (ödül ve disipline ilişkin ilgili hükümler)</li><li>UNESCO, Eğitim ve Araştırmada Üretken Yapay Zekâ Rehberi</li></ul>
@@ -577,7 +579,7 @@ body.yzp-standalone{margin:0;background:#fff}
   <div class="wrap">
     <p class="big">Amacımız; yapay zekâyı <b>anlayan, sorgulayan,</b> etik biçimde <b>yöneten</b> ve kendi düşünsel emeğine sahip çıkan bireyler yetiştirmektir.</p>
     <!-- PDF'i siteye yükledikten sonra aşağıdaki href değerini dosyanın adresiyle değiştirin -->
-    <a class="btn yel" id="yzp-pdf" href="https://drive.google.com/file/d/16_ub2f6Qta36s9tsEyi-2xASL9y4ausr/view?usp=sharing" target="_blank" rel="noopener">Politikanın tam metni (PDF)</a>
+    <a class="btn yel" id="yzp-pdf" href="ALKEV_YZ_Politikasi_2026_2027.pdf" target="_blank" rel="noopener">Politikanın tam metni (PDF)</a>
     <div class="fine">Yapay Zekâ Eğitim Politikası · V2.0 · 2026–27 · ALKEV Özel Okulları</div>
   </div>
   <svg class="mosaic" data-mosaic="end" preserveAspectRatio="none" aria-hidden="true"></svg>
