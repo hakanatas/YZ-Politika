@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yapay Zekâ Eğitim Politikası 2026–27 · ALKEV Özel Okulları</title>
+<meta name="description" content="ALKEV Özel Okulları Yapay Zekâ Eğitim Politikası'nın öğrenci, öğretmen ve veliler için etkileşimli rehberi.">
+<meta name="theme-color" content="#016599">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,600,700&subset=latin,latin-ext&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   ALKEV · Yapay Zekâ Eğitim Politikası — etkileşimli rehber
+   Tüm stiller #yzp altında kapsanmıştır; WordPress "Özel HTML"
+   bloğuna yapıştırıldığında site temasıyla çakışmaz.
+   ========================================================= */
+#yzp{
+  --blue:#016599; --blue-d:#014a70; --navy:#203b7e; --navy-d:#16295a;
+  --red:#a21629; --yellow:#f0b91a; --ink:#1d2330; --muted:#5b6475;
+  --line:#dfe3ec; --paper:#ffffff; --wash:#f4f6fb;
+  --t-navy:#e9edf8; --t-red:#fae9eb; --t-yellow:#fdf3d3; --t-green:#e6f3ec; --green:#1e7a4c;
+  --sticky-top:0px;               /* site başlığı sabitse yüksekliğini buraya yazın */
+  --head:'Open Sans Condensed','Ubuntu Condensed','Arial Narrow',sans-serif;
+  --body:'Open Sans',Arial,sans-serif;
+  font-family:var(--body); color:var(--ink); background:var(--paper);
+  font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased;
+}
+body.yzp-standalone{margin:0;background:#fff}
+#yzp *,#yzp *::before,#yzp *::after{box-sizing:border-box}
+#yzp p{margin:0 0 1em}
+#yzp h1,#yzp h2,#yzp h3,#yzp h4{font-family:var(--head);font-weight:700;line-height:1.08;margin:0;letter-spacing:.005em}
+#yzp button{font:inherit;color:inherit;cursor:pointer}
+#yzp :focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+#yzp .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+#yzp .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* ---------- HERO ---------- */
+#yzp .hero{position:relative;overflow:hidden;color:#fff;
+  background:
+    radial-gradient(900px 420px at 88% -10%,rgba(240,185,26,.20),transparent 60%),
+    radial-gradient(700px 500px at -5% 110%,rgba(162,22,41,.38),transparent 60%),
+    linear-gradient(135deg,var(--navy-d) 0%,var(--navy) 42%,var(--blue) 100%);}
+#yzp .hero .mosaic{position:absolute;inset:auto 0 0 0;height:150px;width:100%;opacity:.95}
+#yzp .hero-top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0}
+#yzp .logo{background:#fff;border-radius:5px;padding:8px 12px;display:inline-flex}
+#yzp .logo img{height:40px;width:auto;display:block}
+#yzp .ver{font-family:var(--head);font-weight:700;letter-spacing:.22em;font-size:13px;text-transform:uppercase;
+  border:1px solid rgba(255,255,255,.45);border-radius:50px;padding:5px 14px;white-space:nowrap}
+#yzp .hero-body{padding:34px 0 190px;max-width:820px}
+#yzp .eyebrow{display:flex;align-items:center;gap:12px;font-family:var(--head);font-weight:700;letter-spacing:.32em;
+  font-size:13px;text-transform:uppercase;color:var(--yellow)}
+#yzp .eyebrow::before{content:"";width:34px;height:5px;background:var(--yellow)}
+#yzp h1{font-size:clamp(44px,8.2vw,92px);text-transform:uppercase;font-weight:300;margin:14px 0 8px;letter-spacing:-.005em}
+#yzp h1 b{font-weight:700;display:block}
+#yzp h1 .yr{color:var(--yellow);font-weight:700}
+#yzp .motto{font-size:clamp(18px,2.4vw,23px);font-style:italic;max-width:620px;opacity:.95;margin:18px 0 30px;
+  border-left:4px solid var(--yellow);padding-left:16px}
+#yzp .who{font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:15px;margin-bottom:12px}
+#yzp .roles{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:760px}
+#yzp .role{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.35);border-radius:5px;color:#fff;
+  padding:14px 12px 12px;text-align:left;transition:background .2s,transform .2s,border-color .2s;backdrop-filter:blur(3px)}
+#yzp .role:hover{background:rgba(255,255,255,.2);transform:translateY(-3px)}
+#yzp .role[aria-pressed="true"]{background:#fff;color:var(--navy);border-color:#fff}
+#yzp .role svg{width:26px;height:26px;display:block;margin-bottom:8px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+#yzp .role strong{font-family:var(--head);font-size:21px;text-transform:uppercase;display:block;line-height:1}
+#yzp .role span{font-size:12.5px;opacity:.85}
+
+/* açılış: tek, kademeli giriş */
+@keyframes yzp-rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+#yzp .hero [data-in]{opacity:0;animation:yzp-rise .7s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--i)*110ms + 80ms)}
+@keyframes yzp-tri{from{opacity:0;transform:translateY(30px) scale(.8)}to{opacity:1;transform:none}}
+#yzp .hero .mosaic polygon{opacity:0;transform-box:fill-box;transform-origin:center;animation:yzp-tri .6s ease-out forwards}
+
+/* ---------- STICKY NAV ---------- */
+#yzp .nav{position:sticky;top:var(--sticky-top);z-index:30;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 4px 14px rgba(22,41,90,.06)}
+#yzp .nav .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+#yzp .nav .wrap::-webkit-scrollbar{display:none}
+#yzp .nav a{font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:16px;
+  color:var(--ink);text-decoration:none;padding:14px 13px 11px;border-bottom:4px solid transparent;white-space:nowrap}
+#yzp .nav a:hover{color:var(--blue)}
+#yzp .nav a.on{color:var(--red);border-bottom-color:var(--red)}
+#yzp .bar{height:3px;background:linear-gradient(90deg,var(--navy),var(--blue),var(--yellow),var(--red));transform-origin:left;transform:scaleX(0)}
+
+/* ---------- SHORTCUTS ---------- */
+#yzp .short{background:var(--wash);border-bottom:1px solid var(--line);padding:22px 0;display:none}
+#yzp .short.show{display:block;animation:yzp-rise .45s ease-out}
+#yzp .short h3{font-size:22px;text-transform:uppercase;margin-bottom:12px}
+#yzp .short h3 em{font-style:normal;color:var(--red)}
+#yzp .short .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+#yzp .short a{display:block;background:#fff;border:1px solid var(--line);border-left:5px solid var(--blue);border-radius:5px;
+  padding:12px 14px;text-decoration:none;color:var(--ink);transition:transform .2s,box-shadow .2s}
+#yzp .short a:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(22,41,90,.1)}
+#yzp .short a b{font-family:var(--head);font-size:19px;text-transform:uppercase;display:block;color:var(--navy)}
+#yzp .short a span{font-size:13.5px;color:var(--muted)}
+
+/* ---------- SECTIONS ---------- */
+#yzp section{padding:72px 0 64px;scroll-margin-top:calc(var(--sticky-top) + 56px);border-bottom:1px solid var(--line)}
+#yzp section.alt{background:
+   linear-gradient(var(--wash),var(--wash)) padding-box}
+#yzp .kick{display:flex;align-items:center;gap:12px;font-family:var(--head);font-weight:700;letter-spacing:.34em;font-size:13px;color:var(--red);text-transform:uppercase}
+#yzp .kick::before{content:"";width:34px;height:5px;background:var(--yellow)}
+#yzp h2{font-size:clamp(34px,5vw,56px);text-transform:uppercase;font-weight:300;margin:10px 0 18px}
+#yzp h2 b{font-weight:700;color:var(--navy)}
+#yzp h2 b.r{color:var(--red)}
+#yzp h3.sub{font-size:27px;text-transform:uppercase;color:var(--navy);margin:44px 0 12px}
+#yzp .lead{font-size:17.5px;max-width:820px;color:#2c3444}
+#yzp .cols{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+#yzp .note{background:var(--t-navy);border-left:6px solid var(--navy);padding:18px 22px;border-radius:0 5px 5px 0;margin:22px 0}
+#yzp .note.red{background:var(--t-red);border-left-color:var(--red)}
+#yzp .note.yel{background:var(--t-yellow);border-left-color:var(--yellow)}
+#yzp .note h4{font-size:20px;text-transform:uppercase;color:var(--navy);margin-bottom:6px}
+#yzp .note.red h4{color:var(--red)}
+#yzp .note p:last-child{margin:0}
+#yzp .quote{font-size:clamp(19px,2.3vw,24px);font-style:italic;color:var(--navy)}
+#yzp ul.dots{list-style:none;padding:0;margin:0}
+#yzp ul.dots li{position:relative;padding:0 0 10px 22px}
+#yzp ul.dots li::before{content:"";position:absolute;left:0;top:.55em;width:10px;height:10px;background:var(--yellow)}
+
+/* segmented */
+#yzp .seg{display:inline-flex;border:1px solid var(--navy);border-radius:50px;overflow:hidden;margin:6px 0 18px;background:#fff}
+#yzp .seg button{background:none;border:0;padding:8px 18px;font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.06em;font-size:15px;color:var(--navy)}
+#yzp .seg button[aria-pressed="true"]{background:var(--navy);color:#fff}
+
+/* balance */
+#yzp .bal{display:grid;gap:10px}
+#yzp .bal .row{display:grid;grid-template-columns:1fr 46px 1fr;align-items:stretch}
+#yzp .bal .c{padding:14px 18px;border-radius:5px;transition:opacity .3s,transform .3s}
+#yzp .bal .c b{font-family:var(--head);font-size:20px;text-transform:uppercase;display:block;line-height:1.1;margin-bottom:2px}
+#yzp .bal .c span{font-size:14.5px}
+#yzp .bal .o{background:var(--t-navy);border-left:5px solid var(--navy)}
+#yzp .bal .o b{color:var(--navy)}
+#yzp .bal .k{background:var(--t-red);border-right:5px solid var(--red);text-align:right}
+#yzp .bal .k b{color:var(--red)}
+#yzp .bal .mid{display:grid;place-items:center;position:relative}
+#yzp .bal .mid::before{content:"";position:absolute;top:50%;left:0;right:0;height:2px;background:var(--line)}
+#yzp .bal .mid i{position:relative;width:14px;height:14px;background:var(--yellow);transform:rotate(45deg)}
+#yzp .bal[data-v="o"] .k,#yzp .bal[data-v="k"] .o{opacity:.18;transform:scale(.98)}
+
+/* grade slider */
+#yzp .grade{background:#fff;border:1px solid var(--line);border-radius:10px;padding:24px;box-shadow:0 10px 30px rgba(22,41,90,.06)}
+#yzp .grade label{font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:15px;color:var(--muted)}
+#yzp .grade input[type=range]{width:100%;margin:14px 0 4px;accent-color:var(--red);height:28px}
+#yzp .ticks{display:grid;grid-template-columns:repeat(12,1fr);font-family:var(--head);font-weight:700;font-size:14px;color:var(--muted);text-align:center;margin:0 -2%}
+#yzp .ticks span.on{color:var(--red);font-size:17px}
+#yzp .stage{display:grid;grid-template-columns:150px 1fr;gap:22px;margin-top:20px;padding:20px;border-radius:5px;transition:background .35s}
+#yzp .stage .n{font-family:var(--head);font-weight:300;font-size:64px;line-height:.9}
+#yzp .stage .n small{display:block;font-size:14px;font-weight:700;letter-spacing:.3em;text-transform:uppercase;margin-bottom:8px}
+#yzp .stage h4{font-size:26px;text-transform:uppercase;margin-bottom:6px}
+#yzp .stage p{margin:0}
+#yzp .stage[data-s="0"]{background:var(--t-navy)} #yzp .stage[data-s="0"] .n small,#yzp .stage[data-s="0"] h4{color:var(--navy)}
+#yzp .stage[data-s="1"]{background:var(--t-yellow)} #yzp .stage[data-s="1"] .n small,#yzp .stage[data-s="1"] h4{color:#9a6f00}
+#yzp .stage[data-s="2"]{background:var(--t-red)} #yzp .stage[data-s="2"] .n small,#yzp .stage[data-s="2"] h4{color:var(--red)}
+
+/* traffic light explorer */
+#yzp .tl-tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:8px 0 16px}
+#yzp .tl-tools input{flex:1 1 240px;padding:11px 14px;border:1px solid #b9c0d0;border-radius:5px;font:inherit}
+#yzp .chip{border:1.5px solid var(--c);color:var(--c);background:#fff;border-radius:50px;padding:7px 15px;font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:15px}
+#yzp .chip[aria-pressed="true"]{background:var(--c);color:#fff}
+#yzp .tl{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+#yzp .tl .it{display:flex;gap:12px;align-items:flex-start;padding:13px 14px;border-radius:5px;border:1px solid transparent;font-size:15px;line-height:1.4;animation:yzp-rise .35s ease-out both}
+#yzp .tl .it i{flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;color:#fff;font-style:normal;font-weight:700;font-size:15px}
+#yzp .tl .g{background:var(--t-green);border-color:#bfe0cd} #yzp .tl .g i{background:var(--green)}
+#yzp .tl .y{background:var(--t-yellow);border-color:#f3dc92} #yzp .tl .y i{background:#c99300}
+#yzp .tl .r{background:var(--t-red);border-color:#efc3c9} #yzp .tl .r i{background:var(--red)}
+#yzp .tl .it small{display:block;font-family:var(--head);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:12px;opacity:.7}
+#yzp .empty{padding:18px;color:var(--muted);font-style:italic}
+
+/* quiz */
+#yzp .quiz{background:var(--navy);color:#fff;border-radius:10px;padding:28px;position:relative;overflow:hidden}
+#yzp .quiz::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;background:var(--yellow);opacity:.13;transform:rotate(20deg)}
+#yzp .quiz .q-top{display:flex;justify-content:space-between;font-family:var(--head);font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:14px;color:var(--yellow)}
+#yzp .quiz .q-text{font-family:var(--head);font-weight:700;font-size:clamp(24px,3.4vw,34px);line-height:1.15;margin:14px 0 20px;min-height:2.3em}
+#yzp .quiz .q-btns{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+#yzp .quiz .q-btns button{border:2px solid rgba(255,255,255,.5);background:transparent;color:#fff;border-radius:5px;padding:12px 8px;font-family:var(--head);font-weight:700;text-transform:uppercase;font-size:18px;letter-spacing:.04em;transition:background .2s}
+#yzp .quiz .q-btns button:hover:not(:disabled){background:rgba(255,255,255,.14)}
+#yzp .quiz .q-btns button.ok{background:var(--green);border-color:var(--green)}
+#yzp .quiz .q-btns button.no{background:var(--red);border-color:var(--red)}
+#yzp .quiz .q-fb{min-height:54px;margin-top:14px;font-size:15px}
+#yzp .btn{display:inline-block;background:var(--red);color:#fff;border:0;border-radius:5px;padding:11px 20px;font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.07em;font-size:16px;text-decoration:none;transition:background .2s,transform .2s}
+#yzp .btn:hover{background:#7f1020;transform:translateY(-1px)}
+#yzp .btn.ghost{background:#fff;color:var(--navy);border:1.5px solid var(--navy)}
+#yzp .btn.ghost:hover{background:var(--t-navy)}
+#yzp .btn.yel{background:var(--yellow);color:var(--navy-d)}
+
+/* checklist */
+#yzp .check{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+#yzp .check .prog{height:8px;background:var(--line)}
+#yzp .check .prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--green));transition:width .4s}
+#yzp .check ol{list-style:none;margin:0;padding:0;counter-reset:c}
+#yzp .check li{counter-increment:c;display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:center;padding:14px 18px;border-bottom:1px solid var(--line);transition:background .3s}
+#yzp .check li::before{content:counter(c,decimal-leading-zero);font-family:var(--head);font-weight:300;font-size:30px;color:var(--red)}
+#yzp .check li.good{background:var(--t-green)} #yzp .check li.bad{background:var(--t-red)}
+#yzp .check li .why{grid-column:2/4;font-size:13.5px;color:var(--red);font-weight:600;display:none}
+#yzp .check li.bad .why{display:block}
+#yzp .yn{display:inline-flex;border:1px solid #b9c0d0;border-radius:50px;overflow:hidden}
+#yzp .yn button{border:0;background:#fff;padding:6px 16px;font-weight:700;font-size:14px}
+#yzp .yn button[aria-pressed="true"]{background:var(--navy);color:#fff}
+#yzp .check .res{padding:18px;font-weight:600;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+
+/* forms / generators */
+#yzp .gen{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+#yzp .field{margin-bottom:12px}
+#yzp .field label{display:block;font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:14px;color:var(--muted);margin-bottom:4px}
+#yzp .field input,#yzp .field textarea,#yzp .field select{width:100%;padding:10px 12px;border:1px solid #b9c0d0;border-radius:5px;font:inherit;background:#fff;color:var(--ink)}
+#yzp .field textarea{min-height:74px;resize:vertical}
+#yzp .out{background:#fff;border:2px solid var(--navy);border-radius:5px;padding:18px 20px;white-space:pre-wrap;font-size:14.5px;line-height:1.55;min-height:150px}
+#yzp .out-h{font-family:var(--head);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:14px;color:var(--navy);margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;gap:8px}
+#yzp .acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+#yzp .tiny{font-size:13px;color:var(--muted)}
+
+/* levels */
+#yzp .lv{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;margin-bottom:0}
+#yzp .lv button{border:0;border-radius:5px 5px 0 0;padding:14px 8px 12px;background:#e7eaf2;text-align:center;transition:background .25s,color .25s,transform .25s}
+#yzp .lv button b{font-family:var(--head);font-weight:300;font-size:44px;line-height:1;display:block}
+#yzp .lv button span{font-family:var(--head);font-weight:700;text-transform:uppercase;font-size:14px;letter-spacing:.04em}
+#yzp .lv button[aria-pressed="true"]{background:var(--lc);color:#fff;transform:translateY(-6px)}
+#yzp .lv-panel{border-top:6px solid var(--lc);background:#fff;border-radius:0 0 10px 10px;padding:24px;box-shadow:0 12px 30px rgba(22,41,90,.08);display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center}
+#yzp .lv-panel h4{font-size:30px;text-transform:uppercase;color:var(--lc)}
+#yzp .lv-panel p{margin:6px 0 0;font-size:17px}
+#yzp .meter{display:flex;gap:4px;align-items:flex-end;height:54px}
+#yzp .meter i{width:14px;background:#e1e5ee;transition:background .3s}
+#yzp .meter i.f{background:var(--lc)}
+#yzp .ban{list-style:none;margin:0;padding:0}
+#yzp .ban li{padding:5px 0 5px 28px;position:relative}
+#yzp .ban li::before{content:"✗";position:absolute;left:4px;color:var(--red);font-weight:700}
+#yzp .tags{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+#yzp .tags span{background:#fff;border:1px solid #efc3c9;color:var(--red);border-radius:50px;padding:5px 13px;font-size:14px;font-weight:600}
+#yzp .tags span::before{content:"⦸ ";}
+
+/* parents */
+#yzp .dd{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#yzp .dd .card{border-radius:5px;padding:16px 18px;border-top:5px solid}
+#yzp .dd .do{background:var(--t-green);border-color:var(--green)}
+#yzp .dd .dont{background:var(--t-red);border-color:var(--red)}
+#yzp .dd b{font-family:var(--head);font-size:21px;text-transform:uppercase;display:block;margin-bottom:3px}
+#yzp .dd .do b{color:var(--green)} #yzp .dd .dont b{color:var(--red)}
+#yzp .dd span{font-size:15px}
+#yzp .dd h4{font-size:18px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:-2px}
+#yzp .qcard{background:linear-gradient(135deg,var(--blue),var(--navy));color:#fff;border-radius:10px;padding:34px 28px;text-align:center;position:relative;overflow:hidden}
+#yzp .qcard .qq{font-size:clamp(21px,3vw,30px);font-style:italic;min-height:3.2em;display:grid;place-items:center;margin:8px 0 18px}
+#yzp .qcard .qq.flip{animation:yzp-flip .5s ease}
+@keyframes yzp-flip{0%{opacity:0;transform:rotateX(70deg)}100%{opacity:1;transform:none}}
+#yzp .qcard small{font-family:var(--head);font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--yellow)}
+
+/* steps */
+#yzp .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:16px 0 0;position:relative}
+#yzp .steps button{background:none;border:0;border-top:4px solid var(--line);padding:14px 10px 12px 0;text-align:left;transition:border-color .3s}
+#yzp .steps button b{font-family:var(--head);font-weight:300;font-size:46px;color:#b9c0d0;display:block;line-height:1;transition:color .3s}
+#yzp .steps button span{font-family:var(--head);font-weight:700;text-transform:uppercase;font-size:16px;line-height:1.15;display:block;color:var(--muted)}
+#yzp .steps button.done{border-top-color:var(--red)}
+#yzp .steps button.done b{color:var(--red)} #yzp .steps button[aria-pressed="true"] span{color:var(--ink)}
+#yzp .step-body{background:#fff;border:1px solid var(--line);border-radius:5px;padding:20px 22px;margin-top:6px;min-height:120px}
+#yzp .step-body p{margin:0;animation:yzp-rise .35s ease-out}
+
+/* stats, refs, footer */
+#yzp .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:26px 0}
+#yzp .stats div{border-top:5px solid var(--yellow);background:#fff;padding:18px;border-radius:0 0 5px 5px;box-shadow:0 8px 22px rgba(22,41,90,.06)}
+#yzp .stats b{font-family:var(--head);font-weight:300;font-size:52px;line-height:1;color:var(--navy);display:block}
+#yzp .stats span{font-size:14.5px;color:var(--muted)}
+#yzp .refs{list-style:none;margin:0;padding:0;columns:2;column-gap:26px}
+#yzp .refs li{break-inside:avoid;padding:9px 0 9px 22px;border-bottom:1px solid var(--line);position:relative;font-size:15px}
+#yzp .refs li::before{content:"";position:absolute;left:0;top:1.05em;width:10px;height:10px;background:var(--yellow)}
+#yzp .end{background:var(--navy-d);color:#fff;text-align:center;padding:64px 0 0;position:relative;overflow:hidden}
+#yzp .end p.big{font-family:var(--head);font-weight:300;font-size:clamp(24px,3.6vw,38px);line-height:1.25;max-width:860px;margin:0 auto 26px}
+#yzp .end p.big b{color:var(--yellow);font-weight:700}
+#yzp .end .mosaic{display:block;width:100%;height:110px;margin-top:40px}
+#yzp .end .fine{font-family:var(--head);letter-spacing:.3em;font-size:12px;text-transform:uppercase;opacity:.6;margin-top:22px}
+#yzp .toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,30px);background:var(--ink);color:#fff;padding:10px 18px;border-radius:50px;font-size:14px;opacity:0;transition:.3s;z-index:99;pointer-events:none}
+#yzp .toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* reveal */
+#yzp .rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+#yzp .rv.in{opacity:1;transform:none}
+
+@media(max-width:860px){
+  #yzp .roles{grid-template-columns:1fr 1fr}
+  #yzp .cols,#yzp .gen,#yzp .dd,#yzp .short .cards{grid-template-columns:1fr}
+  #yzp .refs{columns:1}
+  #yzp .stage{grid-template-columns:1fr;gap:8px}
+  #yzp .lv button b{font-size:32px} #yzp .lv button span{display:none}
+  #yzp .lv-panel{grid-template-columns:1fr}
+  #yzp .steps{grid-template-columns:1fr 1fr}
+  #yzp .stats{grid-template-columns:1fr}
+  #yzp section{padding:52px 0 46px}
+  #yzp .hero-body{padding-bottom:150px}
+  #yzp .hero .mosaic{height:110px}
+}
+@media(max-width:620px){
+  #yzp .bal .row{grid-template-columns:1fr;gap:4px;margin-bottom:8px}
+  #yzp .bal .mid{display:none}
+  #yzp .bal .k{text-align:left;border-right:0;border-left:5px solid var(--red)}
+  #yzp .bal[data-v="o"] .k,#yzp .bal[data-v="k"] .o{display:none}
+  #yzp .quiz .q-btns{grid-template-columns:1fr}
+  #yzp .check li{grid-template-columns:34px 1fr}
+  #yzp .check li .yn{grid-column:2}
+  #yzp .check li .why{grid-column:2}
+  #yzp .logo img{height:32px}
+}
+@media(prefers-reduced-motion:reduce){
+  #yzp *,#yzp *::before{animation-duration:.01ms!important;animation-delay:0ms!important;transition-duration:.01ms!important}
+  #yzp .rv{opacity:1;transform:none}
+}
+@media print{
+  body.yzp-print *{visibility:hidden}
+  body.yzp-print .printable,body.yzp-print .printable *{visibility:visible}
+  body.yzp-print .printable{position:absolute;left:0;top:0;width:100%;border:2px solid #000!important}
+}
+</style>
+</head>
+<body class="yzp-standalone">
+<div id="yzp" lang="tr">
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="yzp-top">
+  <div class="wrap">
+    <div class="hero-top">
+      <a class="logo" href="https://www.alkev.k12.tr/" data-in style="--i:0"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVIAAABQCAYAAABLav1QAAAgAElEQVR4nO1dd3xVRfafBAgJoQZCgARyQwK8VJpSXuhgXazYXeuqa+8oTbBSpUivwnuAuqIgWLCvbV1dy/5W117Wrki1IUWd3/nOnPvuvPvufXmBBFHfH+dz29QzM98558yZuUJKKRRtFpcQLSC6m2i53EK02aBNBm123bu/u8PEexcv3b1JyyusX1mrE8YdbrO4h2g4kfhVaBORFOI/L7YR9TtNFVbl2NqhYA3EDXpQZZxvXuGY8oPXRajG6xYn31qn6uRZ3bDx6uT6np9I+nG+59cE77zScPeZWm6Ptn2uF4HeI8WiVuVieXZAhFsWi1BLfY1gJwagAaQ3E60nepHoaUWbDNpo0CbXvfu7O0y8d/HS3ZO0NsWJ71fW6oSxSfPoGaKXiKb+2kD67v9li3odp+0fA9wvbhJIa5bPSSCt9faoPpBuEQ8Q7aDBKRVtIdrqQ1tc915hE32XCG3xoW1M5rutrqsZ1i+teHn4pb2J+aR59TSR+FXoWyG+21Zf3DpzoGhaMWH/GOB+cZNAWrN8TgJprbfHngBpiOhzBRQbiLZHhUuSmwCgX0fA9L5fTSL9SYhvP6ovRP4sUdhvzP4xwP3iJoG0ZvmcBNJab489Ue1DJGV9roDhByF3fFxHfr4+U366tqH84pFM+cXDmfoajx72C9fA+z3ePWrEedj1ja5fP5wuP3ukkXz+GUs+8VwH+eyz7R16xiD3sxd5xfFKyys83T9H9OBjAfnSP9vK3VvqSJIGbYn0vl9FGt0mxA9fp4lrxh0hWve4Yf8Z4H5xk0Bas3xOAmmtt8eeAGmYgPQLpbLS42cPZcrF2SVydkZnubRhiVwSQ6Ue70rk7fz+doMQ9nZXnNs945ZExUX4ezML5OwmXWTHsjGy8YHTZcuuN8ocopZdb9qnlNON8iRq0GShHPSnK+SGzZlS/hJR8df+KtLo90Ls3pAqmpRPFO1qu1MlgXTfUBJI46f/mwHSzfrxkwcbynlp5XK66CYX1i2XC+qUEZXLeXy17+cb9wsi3/R1vvrO96llFMaMz1d6Pz+Vn/k6n9/j+12iUE5L6yZbd7xRis7zZMOSSTKTqEHJ5H1KDcsoXyJRPyy7HXyt3LAlU7Pu1wTSb4Q467KTRW7PG3TH318GuF/cJJDWLJ+TQFrr7bH3EuljDWWoRbFcSGC2vE2xDLfSFGoViNyDlkfeF0e9j6aAZ9yqqUTe18KSC3PLZUXv4bLZoImyqO8YWUjUvu91iVEfpkTD+1BRf8qXSLSdKQccf5HcvOVXlki3klr/eZoIDBwpcg64af8a4H5xk0Bas3xOAmmtt0eNAOmyFiVKKlxOABhqScBmkN8zZaLuQz5hQwaFPe8JbCNplMg1WZZc0LpClvW8RjYdMFm2r7xOFhBRJfcpAUwLiETuLDlg2MVy05YGv55Eyi5Pp1z4Z5HVZfz+N8D94iaBtGb5nATSWm+PvVbtNZAWKyBV0qEL8PxA0RscvQA3ftz9GkiPZyD9tSRSUunfe7eF6H30ZaJF11v2vwHuFzcJpDXL5ySQ1np71IpE6k+BGKnUD0Sd5+g0lxvmgeURkwEBqa3a9xouswZOkkV9SMUmMlX2gj61D6wRIG1DQHocAenWXwlIv9bS6BkXnypE+xmC6r7/DXC/uEkgrVk+J4G01tujhoDUkUjjqeQ2KMaTNGMlWgNIs4sVaINCUddSubopSaQ5FbKkx7WyUf8pkpgnqZFku+A4Jnr+I6n2Pwjx3AvtRc8jrhDN95U0ured9o8NpBlEg4j6E6XWKJ8TC5tGNJjCDiCqnwTS6tGeOOSHaaB6AunyVn72UH87aLzvJuCuyA3IxfVL5QzRRd5GNDPq2lWGREc5QfSU6a0mS9E+JEXeLKbZmlrNlRmBybJo4GiSUGsRSPvsB0C6UUujw8ccKUSLBaKoNh3w92aA+8X9YwJpD+5DO4ja1SifEwvblfP/hahL3LSSQBpDNaraq1X3uLZMb9toVYtNSH9hZqlc26dQvnB1jnzunNby2TPbyGfP1vQM0UtntpBP/qWtHHHtUPnX606SV4w+Wl4x8mh5+ahj1HXUxKHypAtPlzkV42Ve7+uV5GjtDWgGmfZH1X6nEOsfKRaBAaNEy+4313on2oNB66bUqLixAJniOZCrBtIUA0hTPPM0wlbx3Z1+ipFvnSrrVjW1oXRm0fVmujZNEJzcZXZTU0VB7/KYkwxRLr2bSnQrUYu4+Tq8TqkCSDM88o+iJJAykH7O7k/w6wy7bKQOKAYiq/SJSKMx1+YlchZJno8ely/lDi7KbqafmHY711/Md6CfdZzb5veXdXJnyzY9b5CF/cb8foGU2mvytEFKGq3V7aCJduqqqTPRCor7GF1HeQBkL3p/D9FDdH+UD4g2JppCYR4kQjp/saLBooCelxI9SrSSqNhVhjKiO4meIBpPVN/1/QBK/166Pkl0baSumlrS83yix4nOdMWrS3Q90d8tDVRZPjw4gdJZTNeZdO3K77KJxnK6qNM6fq5kPh9CtJ5oLX97gAnPz1AYXEvpeiWXe44FwPYG0qPp3RKiSZaWiM8leoVoOcUv8Jm0jiYgfZjzMfNfx2V+gtvuIgvhKseuMcKgPvcSkF5B15Y13uf2eyCtQrUPGcDppar7gWhcMM0hqTSLpN4G5fKhUwrk9s/r6uLsEhpYd/L9Tn62CecAEIjt2FVHjp98mCzocovM6XljrS46/apAyu5OTz1eJLK6TBB5PWt5O6hfp65uxw2O7U70PfPwWY8wFtFmnrhO98mjgQVQcSa3Za7vfY12eoHDm98rLK3W4vtzSgqOzgNg/zN/f5++tTfqW4/oWf42zJUupMYb+durlpYSvfhwFIf5wtIAmqfKUTl2F9E2ok+ItnOYHy0N2K2JPud336i4wbEb6PoZ0U6ij4naWhp8EeYpS9tCvfIH4P1EtImoA9EZHOdLVVfvyWsIx0G4LfSMsm/gMn1LhDbtQu/Pj/A+OPZrLudXRKjbbrrezXX+AwFpAotNVblAJeIe5b5f0SYgF5F6P1F0l0//NVeD049CHwiyyYM2MlG45au6y7Q2M2XDDlNlh4Ejqy95/laAdKsQP/5YV8ya01eI/Jn7bqV+b4G0cuxkg4ffUfzDo9IKKinuPUsD2XE+adSzINU66bxlGdIX0R1Ge94bU94gScJOXIDSENf3InreaIR5mijHSB8SM4Cjh0fZ/mrZQBYkAPcGJRvoP+Q4l/IzJGyATApfUc4NFH4Yl+81DncYUR16bkjXRlz33vQM4LyWw9xrlgtqtUGQ2HdR+G+IIJEezHH+a2nA9uI5JGdMcD9yXnU570Zc1p5E6URnMe//QddmRA1VWM3T/3A+J+5Vn/vNAamnRBptI40FSm8JNR64xgBqjk5nOqn46wa11xLoLwyWmz0I77fpMk6+bbAU7W6Tub2vJ2m0diRRm341IGVp9O2Xc9jdaR8D6J4DaakFqUdLYlCpd1taDa5nhGlJadpAeoJPOgCMOy0t4XzLgHkdf/sTp7uL22ldVFmDBIjBsR/Ru3csB9ShftY10u9ItNUC0FeO/T8OA3U537KBNDj2Bwtqd2zZLrYciTDTp/wDOcwHlgZNOw6ABmYKqN4HWNoE0Zl5DLB8i+t6HlGJpYH8CC6vnbYtEa+O0w6dLEixQQJG1CmoeGYDaRufOCgPwgNIT+T8D2B+dzbC6UkhOPZFugKw23KahUQvcz7HVKPPRCaASDv+5oA0ro20aqf7PbKREi1vHZCLG5XKaaKrfGVsS12c7cJ93qdzb0ulBGIPPVkiW5RMkk3LJsqiAaOoQcfVPpDua4f8bUJ8t6W+mDJjoDqcpLY7ji9VH0hvZd6dx8/38/MZasBUXgeCDS0RIIXEBanwJksDENTLwZa21wFE5zPoPOiKO53zPJ2f/8vPxxthOnIab1rahrjMcoCmlUojqPJLHEijJVIbSKHCN8oPXgeQedSjj0Fahi0TC0KQ7t6IfIvWns418r+Rv6922ThjgbSSgbSSgTRI9QuqhTCvOADNLz3KKLkNooHUIfDxfxbMATCnBKk+9gJbgpRf+TsDUke1L4vYSBNV2+NtB41xxCeJdG5KhVxuBeQPn7KN1E8atUEV378Xcvv2evLUc8+UKXmzCUhH7xuJNJcl0n3h/gRp9CchvvlfuhDtZu77BSYvIE2s8zahcB9ajgQIoHufn/9lVUbUYC2RBhWQequAWq1cbWk7J8D2OAYWe6CPJHA6kt/db8QtUnZF/f4RooWWBjO7DBmWAzRwTYJ631qVvVJJWAgHoF5FBPtfpRXLCxtIYQ5o6MOLQRzmcwqfb7hrnUw0l+guouctPTkg3DX83VaNAa6jLQ1gWNQ60Ej7ZkuD4hp32+Q7ZQxYGuCigVQDdaxEGmQgDSp+/MRlHGNp0MbEdLAR/jJul83cRk9YDvh7LS7+UYHU2dlUHWkzFlADrvtAZDfT0mYlyof0+Sta66L8IJwDk+2T6f1UfAr/8JMB2axoqszuMl52qEUwVX6kffYxkJI0+v2GNDF83JGiTW2fN1qTQBoceyHz7UO6h6SHxZHXLa2GY5DZC0stFMAG1fu+Pmll0MBaxekh3boERh/z81dEmfR8vGWq9ppsifgjS0ub/6NB+u/8YMQMcBqnjwUYLPZAirLBEjbSfxjtDyDt5VE+G0gfiMOLIVxnLNQAbDvS/UiPsLYt9za2f77Cz43jtMNNHCbkTo/BCAtrMBn8qFR7bSO1gfQly8/NKji2JxHMHd9X0daXcd2ejPQLuHppz5dF1XaB+l0AqctG6qj20Xvtq+NHam4h9QJfAKk6Zq9hmfzyWQamr4W3Wu++btQr+jt31pHHn/UXKdrMUSc07fXKfVXuT/tStf9OiF1f1RGNyyfVjF/evgFSgBDAEYOwD10h4WFFG4sUNzGPIQ3ZPo2wX0KqWUZ0FdEIJtzPI+pmaakI7TCG85/Ez1dwGmfy82r+DiBCHrB7VnL+TWiQtiA+3sZhsZiDxS6o7wBXgGVno34o7z85LED2gBheaDUbZQdYX8M0gsu1hL/DHQsTxVscZxanCaDEqjsWrK6lb//GeyrfedzWto0RPLia0x1O4XC/1NImiXMsR7ocbunFJ4S7ktKYw+9yuPwARtgwB3McrOLfYPAcZYeL1rlE8HSARgGJdBqnM4KvmASmKLOA1hCQ1j/oOZXrh8nCrsvF1e1jv2sgja/aB6LUde8Fp4A3yGYXq11Mj5/cVvuE/uih1vsBqU1U1if/3kE26TBFNq2YQGA6eu8WnqoLpLpMa2vlBPxvhDjzslPUeaO13WES6eQJAqktCcIVKd31zZYcJQ/i7pYGIf+2qBx7rKUlLtzP5/whHWIBKp99Ja/h73BDgvvTZZYDVhlWdB0gkdnuTpdbelUbqj3A9BRX/WDf3GY50rAbSOcZ5fQi+KDCUwGA9BmFA/jBHWq9UQabEGY6AUnDfGznrFQLXPH6Klb3R8XkHd1/YVuGpI8JBeo3pNOr4qYbpAlN23U3u9rBHa6PpcEVz9A2cg2+/YXf7+R7/z71uwPSBHc2xbOTekmqvqv3rYvlwvrlclFWmfzsiYaOmrzJA0i3+DwDdHcL+eP2uvKo08+RImeuLCQgTXh3kw9oetE+32u/ldT6z+qLTgNGiZwDbvytACkkQawsn0HhBtOAyDQkaaiRWPE9mb7BPgi3nlIOD1AAyJ6kKKiueAcJq5+iIIEcXHGctDKMfMuJTrU0SGVxnDMtDWJu/04s9pxg6UWvnhz+aJV+UEm/ZljYZw+l96dxWHddD7G0rXNYTNmDYy/gbz2M+rXnuJDaulKYP1saaOxwdZjXkAixQHYcl9VOF3bkYcTTq/O1ZFnJ3538ddhj2LwCh3lMOniGHRkSOZ7/zI76JxpxcH8W86zECkbKfIKR9olM51p6Jb+S0jmVwh7m4nNreoe459P3w4nquDYJ/NGA1MshP/7iUjwfUzP8ipxOShp99OR28qfvU7VtdKM3UEr7Z3ObXJIpntkV6t77KqRoPUc27zyhVmyl+1S1Z5enky84XWR12YcHk+w9kEZt+YxyZfEeDH42OjeYVWfQuNOsartldP2qLk9iZQ9Gyp7iG6c6+Rnv8jXg+G9fdeoCsK9jvrPbI+aMgug2cW9a8K2/SidOed0AGpXvHwdIYw92jgegiTrowwl/YcMyOa9hufzk/kbe0ujXemX+x0/qyu/fraddorwWnRDnZyG//S5dDjn6UikaLlEr+O371sBW0V8LSPm80V5HXb7vzhtNFGgS7byJAWk8EEg8Tk3Wz+9bddLZm/K6yuElvTGQesbPr/T5ljiQVqv81QXSqvL8nQKp98HOno71cb87QAzpdgUBM/xGHzsV0miKs1JvSqNbdTmevaaNXP+ndhpIdwrzF8gOkHLYJ5/qKDNazZaNAreyX+lvUCI1zhtN2ZfnjcaS6c6TUW0grfQB0aoGgHPUWwPfOHsygKqKs2+BFHWDfdjeGACTR55XOC8QqgJI0z2l1f0ASKvk6x8BSP3V9ejdTd52U8fGurJNsZxbv0Iual4qN72Y7qzUu/1ESaX//r16clG7MnlDWm/51auZ0av6pt0U73bpcl987XFSNF4sc3vdINv3i2Mr3dMtom73p801DKTGeaO/ojQKu93zfB1nwZ8yyAdq1F7nxeoyDi+B+w9sj3Baxyq/+5CRPRv0CQPDXtYjsfjwZMBKOw77gH0Uq+ruLbJYIX+SAOhkPyDyKGs3AqLH8vUiV7MaaxsvfnuBXdBFe5Du7xhI7Z1N3i5MYdcJUFXtYgq3KJFTRTf57IVtdNbmSr0Nolt0Gf5vUrZcKErlFeIgOenGgY6f6QbhvduJvr/zfguZ1f5WmVYwQ3YYOGrfAGlNrdqzbfSicccL0Xz+r+mAj5XyH2nwwgEbvpk4sKJrreWnBwR2Bn1q6cNNsNCBnT53JToAE8yjSqptIFWgWKmkOCyywYEd/qpY/XY79C/kvndtNcpqO/8/b/lvWd27OrmBMgmkPkAa88+msqiDnf18RxPZJroyNyDn1iFptEWZ3PzvdHPV2wFSSJc/CbljUx15T68OcqUokten9pPtSsbKFz5p5+1rakul23XZrx13lCQgIqn0ellYlVS6J6v2taHaM4hufyBFHNHtLJHWa5ooqKwRtR5qI3ajHGrpVXL7fR4PPAxoSEWQCKFuwj0oSNSbBn1zfo9V8b78DQ7scKMZwukCYL0WXhAHq9JwpenD8XHFinpvlW9Q5V9I1/4cboClV9URP8DhkA9WmuHvOViFC0bS6Wfp09/L49S/Poc5lMvbwfiWwnU+iNNun69X7odaekW8n0HgCVa0Mcm4j8xrz2nAb9aM05d5jNVwHORhAikOAEG9h/G3TKsyYlfO43yuZb6A78cwP/rbvMwPRvI4nHmL9sUuqL8wH/tGeKZX2c0yN+Q6gr9Yde/o+g7/1+NVvYLKY0FrBhokW3Lbga9HWvaKvQOihaxVIG/EredKG/U9xNKuaFbkfXBsRwLSQVQvSOfYwZbNfB/MdenH/O2v0tV5I2wF8x/19DuIZY+BNL/POLGwVcWeAam5174qIPXbe28CKaTRZc2L5TSSRiO7mLaLaL9RgCGvwr+5IEvOrtNZ3pNuyVktusqUhjPl2ePOcKRYtzlgM0uqKPuGxrJ0wGhZx5ou2/cZIwt+C0D6kxCfr88Uyxt3FLNTu4hevS4TzftPqInOgIEKZ+z/WRqo7E67wAoqqQ9bLW+xtN1ugqUlwTVWZZQdDYDzIH87jzvsJ5be/RK9tdMZTIepfPU+9W2WPjRjI79DPPhuYosjtjzCGf4zZT6ILvupXHaceQk/xaWW3qGzhcsCgo8kJGYcNHKYR/1hLxzL4T7hspvfp3B54KDflu4hHeJwlI3MH5sQBjugXia+5LhUbfAAZdpkhDfLBx70Zp52JsKJVdidhW2zOM0Ku57eJVpCIFKRr0EW212h/sOp/XLm11Yu0ybm5TY7j3ztUH+8pXeSPcF8XWjpY/DAe/ugF7ud4D/7b/7+LoF7kM8/sMMAeF/gPP5mBdUJVPa3jipuUH3DyVxNXDw9nvmFtCfBZuuy6Z5KPNjKfBnC72CKuMfSp1Rhxxrqk8FtvoX5a/IVaYMnyy0NukjvbasGNad2leNEbt8bxYj2Q8SK7E4EoMV770fqDZSOM74f0EbU+jYBOSuli/Ib3fLv+tHSqO3KBCDEOaNf15GruhUp9yj8135R2zKZkztJNi+fLf/zZqtYSXazAaTf6PJPnztQpuTOlq0OvGnvTs1nsK1Vh/ytQvzyU4p449YsMU10Ffe2bC+WUUP1OuBS0aLfeNWYe9EhirkuH1t63zpcYubwOwxi+F7a2xDH8PuwFS1lQqJYyd8gGWXxQMFzqU++QcoPpz7B5/AC7uQIH+I8kdexlvanxHuAYVtXGidxnL9zeezzNx+yHF/QM4yyfeQzkCDhvcntebbxHvx4ylL/AbvuBn53MqcF8LmYywC/WOQHuyXCuQ8sPpTjABCRPnxez+K4OLMTB1NjJxDA7SsOC5DEwczwUQXIwazxPfw8WbV9mMOdaWkpfCKX7UIOi2+zLe2LCr4cFilHcOxr+UHVZiMtpx/j/ADzeMDLLKef/8ejTuD3sAhfgyQ5OkAKDQEbGDCxdLZi+X29IaC8lK93lZkLZIfzt02cLyaOv/E7nJIFadc2TdzG5V9vaX/Xs4jQ5sdzHxrBGgp2j0EoyPUoT8IELRBSaE7fm0VhcIzoFBwlFpA0eleLDjULpH6r9LHvnTjKfYqk0Smiu3z0pHbaN3SXhzTKIPjWvGbqn01LGpbJtS3y5aLcMhnoPorU9Tvl6HFHeEuztq0U6fws5MefNZOdh4yQKdZMWUjSaf5eruDX2jF6rNJv/ke6WFC/VIRIfUCD3ZndQSzJKRN9u18kSntdS51w3J52DkgPOA7tJb7H4RI/8UB1q3P2fu+lrvcAnNv5GwYsVH4cj4fdOe4T6R3wDUZ+fwGp8B4eEMcbAzLVcux6AEE3kA7jAfsQP4/msBe5bHRQYzfwt+N9ynMRf8cBI7ZnAJzSccTc+wSktkp4Cod7yQoq4EEZIRnhrM0Urov7NyP2GZ+QitMs/YsSXJvyPfwyMy190LFk3mcb5bfB/ggjzQc57HCrMkoaRBnsw0H6unhpAzpJzer5ykgf1v3/Eg4Ps4l9qMzPXNdWMTZOHfbvlm2rdfIaz+8mePAZh8BA+9nOfUQy7734BQCHFrLe0rugHqB2cCZmXYYpXP6RzEv0RYBsE24LTBgA8++5TnsMpADR1n1voutY0an3SDGSJNGV2R1JqClRY3IvgLTq/9pXtaMpzH6jc+pWyNlpneUXT/Dq+1YR6zdK73d/kyrv7tZR//gup1iuaZ4vF7aukF37XClF0SKZVzpevvV2tr9UaoMrfZ+zpI+smzeLpNIbZXv8gmQvjtmrNSDdJsTu71KVNDovtYwayLbDFJM6ERD3Ni8QU/J6ikYDJov2e2YzxaCB6vwtq2KoD9SigDssSQyj8h2pMRoUnePl/sQg8CUPQj+J1AQJANFaHhB/di0Y2MfMQdW1XGkAFAGkD/OgUhIzqZ9P8f04VsXtI/q0eu5dHpKoriNVUmknR3IZQlym0Yaq/mdOazu9B2AB0LB4gzyb+SxwABhwXirU+MdZesLvON62sJNIlx0Hhmzi+tgmCAAtQAATE4C6saVPzsK3dVy2ES5ewgRjn9r/Jxe/D2PAxD59gIx98PMDrAbjcBFoJFM4HDQPTGBvWOaRetFAehJL7K/yMwAXZh1Mxl626RFcbkjOAyythr9lRZ+UD/so+g74tY3LgmMLm3l4J0yJ9A/NVxC2/q5mviEMeIgttQBwLzeyhEC0FUmhTfpPElcWHioebNpWqfPLWaVPHEirONg5ke2gnu9a4XciLI2e2E6Dz26XNMnH4iHfN+ZkKR/TRQ20bXZNliXnt+osO1deLRv1nyRF40Xy6tFH62Lv8JBKbRX/RyE3bMyU/Q6/UoFpx8EjakYiJdW+v3uL6J6q9pu1NLrjgzpijigXxOcoIA0rybSjmNe6swgecLHI7bNHe+4BmPZvKzZY9jmXQWV7cq982hLpYlcakG7mcod3A2lZAmXA4F/LaZ/m+nYQv8dBJ9mu8sCMAOB5Iqp8wYgkZbfPT2qQBWPsn+6J4mYOv4DLBHUfkpAJ4H/mPH6yHDsmVGmsrvuthKMOP1r6JHqowR9wXPDI3lpayOWE5NSZF5VKOBwAAFIhpL+beEHK/iuAe9UeZXiWyzjUxa/D2BRlA6m9Fx4LMjgXAOovJg/Yil+n/LEt9R0mv0OeIQG+zvzGoo99UMntVvQB2SCYfDB5gA/oJwWcNsJfZoTDQtQOfv8Jtz3up3vkbx/IDVPSB0w4HhGTgn3wDQ6b2WMgLQgCRG8STQlEryo6VDzUNDdKCq0ekCawRTTWPurvqB+xjRIIz6c0ljQvlVtfZdvoRpc0yYtEAL9VFR2UbfQOkmIhya7NzpeL8ypkl75XydZDr5dNSSJtXDxJvvxam9i03C5R9H3lqgNkOoFf6wNvTswdKoGf3/V3S6R7CqSQRjelilfGZIvbG9sNFA2kIWrQ+5vliVvaBUXKkFnKblPNjgIghVQAaRS2JKiwmyxbajBV5GDkxPXbPNKx7ZBQtyEJfMlg4ycBJgqkA/j9Fx6DGQMXg/IxfrZtpBjEWMU909LggEWYfLe0mB9L+M8QAA/AuJp5MMUV7zTOAwsx+ZY+eAUTh/tXyqYN+RDLMRs04fpi8QQAbf9JFZKmDRg2OKaqCa1Sqfx3cRozGEjX8PMIV75YbX+Ovw11fTuM37uBFHZa+7fQNg3NV1K6WvAB+OW6JFGTRnC5cY7r65YGtVhp1D4+MRiZiHYZ+b1uOZsswC98R1tgVR599Id8279mWiYAACAASURBVPxQOdaUiqdympO4HUBlFo4nDEb29+M30xpI4fHgJVnHIQgoTftPVJLoQ03zxLKc0sgYrD6QVvtXI7EHmbjBVp032rxYTicJ8+lzcx0p0vQD3SgibkvPj2gtR4ve8lbRTc4RnZWddLnooP5r3xD/tS+6XdYpmEalXi0HHXKN/HJDI21rdQOp7Y+6U8gdO+rIYWedI0Xb2bKw32h1rqi1N0Bak6v2P+jr/JQysUzZRmOBFHRHdpFY1KpMHNL5HJHd95ZqdRJLu6LsUB3ZGSCQZL7hznyo0XFtVRAryH2440P9tFf+8a2/UnH1QcWQUnpZzjF5AFi4KRVZ0X6RcJ25l+OrVX7jn0Kt84MRiXk2pwFTACSLJfx+lmVKpNE2N3tB5REr9sd3bgL4TTPa9dMIgDhhjuFvr3BdAIRpfG3J9W1nRf+2eQjHeYrrWsdy9rmDN92YPxdwuG+5Ds0pbjovLh3Jfe9uLoctkV5hlA2r/jiP9XH+dqirfoM5jX/xs72gdAnX/U5+fpxV/FLuB69b+mxYPyCF3fMjxKW8QWs8eAuXKLQjbKOoAyYITA6Y9D7jfC+3oieed4x+clq+LvsPlm0O0e9t1X54nHYN8IQAabVa7k/t+owTWQMmiMs7HK7UeUii4Qhg1rBEGvZwf0pkX/3y1sVyft1yOTejXH6+vqEjQW40QI/z2/VFqnzgWEsu7V0s7x9SIO8b0F6uIXq8X668a2Aneeyxf5EDTxguDz/5r/LQw6+SBw8cIZ97plCn6Xf4M6f9NIVr1OFW2azLeHXMnuUFpNVQ7WsESEki/YXo2XPaiGXNA7zI5A2kS4kebZwjRhQMFqmDZor2Xtvt/KmnZdtFoxeG7MOXAbJXMlCgEz5i2TZCbQZ4x+ADzgWFhNbfcqQNSJL4XciH3JGhXkFlNlV+qHz2qfMRYDDAFCvdOy1bxdf2MvvwZpzj2ZaBYJEVDaw2ONqLOFjsKaqCH/2MiXKux3dbigN9xPX/kMv1P0tLPZUusBlmxPnQ4IdNMKmcaOnFqutdYWEygG0Xk9r3FjwddNoPcJiJVrT0m8fp49upVrT0drrBQ5hJZvLzrRwXfpdwm+ptBSPPttps+te6f6CHtGcY5TY9H0CYwPSkZx7y7KRlnx8LjwVMLPbh0j9bMC844a/g97Cb2qYA+whFt7nJJHsig2tcx0SFjAKiFn3Hi8uK/iQeaNY2Mt5qCUjL4i42+b1TxOeNPnJMO/nLbhG9V36LQVuF3P1livz2g3pyxxd15K6vU+XODQ7BHeqbzely06YGctvmDLlta7r89NOmctNnmXrRyu+3JADsn0jw+66eHDzsIj78ec8ONKkNIAWFW3USS1it9wNSvMfq4crsDuKIijNFo4GTlYuGTZhV43QyLIQs445onkIP+xUACSou/Bor+D06OiQYuKM8zoTODNuhvV0Tq91YqMBWREgdWJFfxfdY+MH2zhJXXtP4O9yhUt2D1dLgDLcsrGhDRcYiD2yahTzQmvIz0oCqWscYFH25PMj3FLP+HrzBZAIbKaSzE6zoFXgsqmEAr+QwqNO9fAU/AG7PW0HleG+mOcDSktdiDmvzQ8cPjn3G0mYIOzxWqicxb7GQBQkPLlD4fXU6TxzTuE6XWtEO7WinpVz+gywHSOElAZcrSLIAPfitXsnPuEIChdkBZbcPYT6KriEud9QxgS4gRf6ncz9a6pIYQW2ZX+DbcCvolJfjH8Nx0XaQzgP8fLelT+O300Ebz2U+g58wrVzMdYA2Yh6daNJRnPfMfJKePUw6EYJvaNvK60UeUfN+48UlBKLrmuXT2OpUQ0AaR7Vf7uFHGmsXdR3unFMsF6aXyvmNy+UnD8U5b9T8M+jPXJxfjKtNPxtkv/tOxB5i4pZI2aXqb6u6SdF6tmzeFb8kiWMrNdV8PyDd2/NI2eXpiRPzxJKGJRFpNB6Qwq/0by0KxdKcYjElr4eYkdud6ADRvceVylgOt408AlWP3VDofPX5ah+0bLvxpPE7dGD3Qkoax8lwDWTEbWC8N6ku59XEiv7PuplWRP12AangMqVzGOdQaP3ddntpwHmYqnUqv2vEeafAhQW2r6Leo9WgMcLWM/hRz4o95s6uW12fukFqb25F88pO080PTdqW18IVx5bkMqP4q8uYzu/TuSxmGevzN6dddBzww+abHc+8jzpOj9NM57zSLfeZBtHSm+0CVp+Bvr4V62fcMNLGQWcRitu3PqffwNK/rbbbK4MnADcvM7gdMyynj6Jubrczs4+rOuTjVzQ+IJqnBI9xamHp7MCxYkmrMhZQYkG0hiVS72P0vFyf3NLo8lb6vNGHjrbk7m9TvE+/t8HO67/1idAm172Xis/H7H3/Q5ocevL5UjRfIAv6x7GVViWR1oT701Yhtn9eV6wqLxKL0ksjIBoPSG0wXUENfxcB6p0tihTh+6S2vUWXnlcr3zcYzfMIQGpoe2mtkgeQepPfd3Ow8zu4iLXpe6PI6j9BFPcaISa37SWC3S8h6WOCaNn3FkXY5NDWe9KpHaqqfl51qm76icZzh0uEt+7w1WivmPbdk/Sq06d8KJfaG65NJ5aerNYcML7uVuMn4Amiey+Rxuy1j+9H6rnIhF8sNy6V8xpWyP/d29jf59M+mPlbvm5jCfIbj3s3feO63+yRh+tIvgcfK5apLefIxjhmL94Kfm2q9hu1NPokSaNzRXkUiFYFpF4EX1PMqGtJPRlnDRAHHni5AoiW/W7Zb8EUNl6UDx27Sb+JIouAbY+AyBjoAFBIoOmDpooSAlCA59S8noov81t1EZXdLhZ9u12kaHDXv6r4DQdOUap/QW3XuZaBNIsmCUwOBYnYzv8gQApeZKOPDZgkGjOdUHqKWJ2Vr4QRr3G2T4A0ri3UBNQcfTjJDNFVPniUpRzs1aq8WwXHyv32qLLsPW0UsXvwjYNQdu5OlUefeKEUGUtlPoFidbaO1hiQfifEplfTxeqe7WOk0T0BUjsMVhuhpjzZuKUYWTBYNCPJ1A9M2wfHiOb9xysgaTxgco1S5sBblepUFBytyoB3UKkaGWHqDZ4heh54mTi67HRxRPmZYkDXC5QkbW84gItXC7N8/WPTV25gQT1g2pHqXn/QdFXXIQSSN1r9xBNNctQEA/exFS31xobVTI82aSUu7jBUDOx6vsjpd7NoQOCbRfnX2sRTC0CKyQhSN/h6WOe/qLo0GDg1wifwDhNLzMKkD5AiHMI3JP4qPg+g+JUUv/d11Qa+wt5jFIg1oLRylVnluvj51yCQom9je2fq4NtEzwMuFUeXny4O6nKuOLn0JOoDltLq9NgpriUgdan25qEl5qq9l99o2DiPdEVuJ7mwQZmcm14hP7ZPvzelRds1CZLkLiG/fDpTvrOyqfxodWMlvX50TyP5v3twr6+f3ZMpP1jdVD7yUCe55uEK+eD6EqZS+eDDpfK++8vlqnu7yE8/NSRft5pvP8PF6l8FMrPdbbJBx2nqlySJ/iivRoCUD21+/rxWYproIsKtO9UYkNoNfXtOqVjfpI0YXTBIDTR7yxs6GO4zaLClDpkpBtHAOyswjDrYyR50ElMi36LDndvpGFHe8xohDporDu98tpICcFbAqUa4IyrOEnNbdyHQzxEPN22jQG5I1/NEvUEzFACgfAO6XSDOtstXEp1+Rc/hIoXCNKTBnj5gKqnrN4tjaMBc2/5g8Wyj5kplW8q+gGGPAYNvyBN5n9fpaHFqyYkKjNIIjJG/H4F3kPw69B6lJiIAV7zwoEyipv0mKXMLJgH7vQIZAJ0bvOMACyYPTCIZBPx1CCggWf8lcKxYl5WvFiKPKzst0h7gnUVp16VJqzHvikM7NCB+ZRDl9r1B1SVzwK1KgsOkizxgO7TjY5KqRzyBjbkRg3OG4vctEX9m9C0s4DQy6iwGzVIawfmdjhRtCIzTBk5X9cXE6gXMmCgzXXwDb2GiScRDJd/IX1C/6NzzanES8WFe6wrxBAkWDzTLE/dltSMQNcfOPgJSv//aey86BdQKvTpvNEef8PTEqe3kLz+J2D31xnbQT9Y3kvNalav/2i9MK5Pz08rl/Hp0rVcuF+C5XoW8s157OTWju8wrvEGmlc2TDTpNkpkdJ9N1iqKMjrfKlIaL5cFHXia/21FXSZ7yKw8zgiEBXzlmmBRNF8q83tfLwgRX8GvERvqjEJ8/min+1rlILMYikycw7h2QhhgoHmyaJ0a2H0ySwXgC0BsJnG5TADS88GBxevHxCnABZHBAfjCGcpny1Hc7jL7X3x6KCuuEebpRC2WzPZEA9M4WHcT9zdoRwB0k1nMc0CMEYPi2LKdESYx3Ny9UUiOA/fyOR4rTik8Qi3PKlXRt5g96htKf0raXCnMBhT234zHiqsJDxSNNWos1WVYMgHoBqc0nSCfrqHyPN85R0jzAA2miDBcwnW8QeDeIwEscukgcSsCLXTDucO7nizsOVcAEsLq0w+GRb4jbgaR2gHfUOQouIFVA1WecAkNMMN16XKn4eUbxcar8T5B0HWbb+XqjbcC7MdZAcU7gGHFm4DglsXekCQC8uobi4/4gmrwuKzpMARw0gBvz+1K8bMVnxIep6DTqK/nBcSodlB1xYR4RQ2axhjBFgfB5nY6K1P3P1DbzaKJ8rmEWlXWIAucrKJ+jKs5QwA2JVdftOmWWOJ3Cg08m/64uPETZuDERmOYXPZncrCYlW/LGhIAJ9gLuO7fm9RTPNmyu1hCwOOs9dvYpkLp/fuf/nyZcV+YF5Py6FXJB0zK58YV0Rxp1AxqB665tqXLtoEI5SXSXC+uXygV1y5TPKWgB0UJ1rZB/Sy2U0+t3k7mdrpei61zZuGyibETUsHSSoiadx8v0gtukSAvLabMG6zy/91Dx7dOl6PvHnzaVbbveJOsWzJBF/RKTSvcaSNk2+n/XERCIbmK5hzRaU0AaYlUfIHElBmzv0XQ9RHWwxxV45kaAzLvDRHe26PI4+TphnTAAslXN2yuwvAN7lendfSQxxQO2pWyWwAC+v1nbmPKZZUT691D6AA34/j1I0sY6j/SJWlL4OXSdRtSI7hvTdQHRrJB+juIVJDrkjzRRhgeY7leky/U4gcvCVuUkaR2jJqLHCMSiw7VV0s8DRpz1lCYk5JsIpNY3ba2+4/2jBPyT2gWVDyMkUwBZgQeQ5vG2YADY5QRGM3IPVBMgynoHH6hhDm77upR4t5omFkjda7IKxJUETBPaBlWZn6D4uMcmj4epHJhwb8zvpyY9DTw6PtoNdbmpXV+xliQ6lB1xAZKXdviTGEFlGl54kBhTMJD6ml13THxtxN+ozkuIR0gDZUV911J5oI1g8gD4wY3vnE7HKkf49art8yL8fKxxK5owe1O/PUxNNNCuIFU3Ii1kYLfzxXjiHUAa+Y+m/NdS2R+gNNAv0D/QPvHGTe0DaZzFprDH1lBzgQnhb8UupvM8Tr/fKqJOv397aVM5O7Wz2lO/sk1AgTUk32gq1sfo5ZbLzsGrZdbgibIjAV8HoqJ+Y5jofvBImZo3W7YtnSDffK+ltznBtpV+p/OfOGMIgeJsmYNj9hJYwd9r1R7njT6YKUJtA+L2Zv7gWFNAGmLQu4s69NS8HmrwQvJbmhN9kk1NA6lX5/TqrPHz907DOx1f3txi9NnzKO4RhjnqKu90/MoWYHApVlIOeGmCWHT5AlHpgWCrhW12WYR/evJYTQN+LQHNdALHy4sOVyozfBxBkMLySP2G2nxDfn8Cl3YK6Fa1KGRJPraPRF+d78vp3VoCKwAMyoz499I96oIyraEyAGxDLUuiyo2yYiJE2Ze37BQB2L8pHrRTZYfKjAUch3/u/mFTiSo73o8lSfeWdn0UeON4OpwnETLKbk8EKCPyAX+uookA0mdl94spfJECa+QNWqMm0tj++usAqacfqbdE6lbtQSsISOekkDTarFxuesU4/d5tG/0ZJzzVkWsHFiiVPuySbEMGYC8jIibJBa0rZFnPa2TTAZMlzUqyoDIa+LD1E6fhi0ZL5CVXnhQL4qZkukGX4cuvGskeh14tU9vNpPhjqjxmb6+AdItz3uh02EZbxQPGmgNSu2Oj48cDqt8ykMaJfw6VdQt9/4Lu+xAdQPffEn1P96fFq68fkJrh/MsXDaRusA57xNeg1pEAo4cIEYCcUnySkrxgSsAvLtB+y6vgRzwgVc/Z3uWJ7UeBmLo47e5Vbzc4eQOpfi5RWgqAGaCOeq/INvke3Z9N/gBwoVEtJn7cTc9LY/LeX4C0GoeWuO8hjYaaFcvJ4gD55NltdZI7XYs+tq8nFrIebSAXNSqTC+qVR07fD3lSiTr9KQZIg9FAWkASJRaOAHLtDrxBvv+/5vFdrlgqnjF/gKzTao5s04OP2astIP1FiC/XNxALM0oje+p9qA51RKigUD3T6Zqp7wMpPuHr0fdmRA0ofCZRY6L6fsDkokYUryHHbcLx7Q6I/OrSfQa+E2UgDF3bUPkydDlVGSkOnlW4mCtTOj3n0LULUSpRFlFTrh/SRt71PMqHPBozD1BGxEHclHgd33UNEg2k+zwqZzu6H0LUK+waFL82kIKWK+2hgzIDAHDmk/oMSdYLRD2AEu2QR9cCvjZy57E/AGlV5AekNn/AC60J+IHkfgiketU+3qElzg6mO9p0VAeMzMnsLDe9mOG/Us9H5b0wMofCd5ZLm5Wq+CEfqTTsB6QuiRRnaELNzz7wRpliTZfLVxyoy/CtB5jaZdkh5KdfNZEDhl4pRc5c2eGga2Uh9uHbZ5bG+a/9wOrubCI+f7EuUx2VF79xAwQsgeuo7g8QD1bQ9R6ic+OAB8DtBqJVFH41UZioQ4JAei3Fu5/ob3R/N1GlAaRIuw3dL+EyIP2X6BoiasdAOZeuayjsSrrexWHuDuu01JXpDnr+R0jbK5HuCKJ/cv1W4Znum/kA/fVEa7iMfw/FSJLeki3dtyA6ieg2Kt/DdH2T3r/Jad2Kbwzu+w2QukFjJduXqxjkZXR/OdG9dP86Xd+l61t0fYjoSv7+uwBS/zx/E0AaK5FGASmB4PIc/Xvl8eJA+eJI/g0I7JBfiehdSHjmVfOHjsiXN4seymlfSbM53rukliUIpFafsbLjgFEyu+vNVKOVcswNQ51yfC28d0Ox58DDjxXLhm1myZRWc2XbXuPUKr5afIoDpH2OuVRu3JxpAun9viDK20G3vZRGQFpRFZCigSaHo//Kem0VHfAcY/J5PqSltwSANDDc4PlTIS3xmR3rCrr/2UgbYQYaHezBqAnVPRlmuz09Andw/bpT/T424o6PU84FYed33y8C/PxA1ChXV7p/OjpvLlc2XZ1yvUjXCuY7JHAsTmVVA0hTEwTS+kSFPkBaJxGA8SBI+RPp+o1nPZ0rvl9lAKmrzFH9DpN1qgeQooypHkCaWgWQpnm0k682gW8eQJrqFdZn7KR6tJuXJpdqtE11gDQlUSC9iwb9Rnux6dP1DeXSpsVqNT3sAtIw2zBXkqS6MK1U3iK6y/sGtZc/bUtxpFFz99E3LAmyRPr+iiZybqsKdbze8hYBdUqU2RFsIhHe30ZqAF2H/mNkWwJAUX+ptDpMkS+8yn8b/YYXubx2Rm12gH3+on6ySYt5SjJtT1IpzAReqn17BtJ+wy4hidQA0i3iPt8zR78TYscXdcTzF7QWixuUVTVAmhI9G7JdyjQfXghr9d2vIx1G735hsLozMRBVaZxM113M67kuSesWYzDuJrrJ7HR8neW0VeARene9HtyBibhqCuCZ0gpAMp3vDMjA8XT9hfvRK0RN3ZJRWAF74AWuF2ybB8QDUS5XCYX9zCj7/8J6lf4yup5P35YhrVBk0TRAkmqgOQPcIRTm8bCeQK4Ja8l5hJ7IAtfydRSFnUag1IueO9H99RRmXFhPdghD4QMcLzAypEAssJqepyEfHU5pHODvSG5vn74Q8CWKe2M4UgdVV0j41xGdTfc30vtHQy2jtMhrGUgBijTxBqaEdTnH0n2hPZnQcw+6YmIbzm23nN511P0vcA3KHFITvZKC041yUtzAUbpcgRsoLniST9cTw3qiHBvWfajMv76KnwiDPOBpcWbYZ6LxAVKKr9qC6hWgvqjKke8RDu09CuWicMN1u6p2HsFtPobpmFDE5KTi9Q5p7W8M3U+i64V+QDqH6F1bIoWjfKh1cYwfaeRKUuSC9DJ5T88i+Xa4qfbfrMYupB8+qSefuaSNXNSwTN7epDRiPogG66olUoBby243y+blE+So64+UG75sske7ot57r6W89uYjlUtVVpdbSDJ1L2hpGyrA9oRzz5bbt9czT/oPx1ut3/hkupgpuogVrf339TJdHIoc/hIl0V0QLT1E0XE2kNL9mgRmVpvOCmuQRD4r+V020X2GhAOJ5s9mOka+i5xwgbO8Z/iohbMCe2BQeJKaAy+GIz9PDFxG0mIUgFCcvxqT64qqQJRB6dUQS7AU5p/0XBzNA5VuH3p+I+yEm8xhupn/GfOT8sJa2g4SwV68OeZbzLNKU7lgET1npDc95GvP9gdRosEU/0dOBxrDaAZpkzcN6d30qMkwO9A/pH8nfJnDowAW4ooNcDrbGX+q/2Hyy9bpFT/r1Cew2GnLCJ3h8CLwDBFs+xcafPmUqDDO5F6EMAY/T48T1otgcvosFFUGZWN39xPY5ReGHE3HQ9uOfHuYni3mTQ96/jbk9IF1fkA6iuhpBQxYxP9vfXlHaUDOTa2QK1p5nYYfkPPSy+WDhxfITx/ALqQm8s2ZWfKtWc3kW7Oz5JugOZreYnpzNn2jMG/PbyY/eyRT/vumbLm4WYlc3KjEA6x1p65q1R6LRFkVE2S7bjfJRSt7ySf+WSSX3tFDLgn1lLevIFrJtMJF/H5JuKe8Y1V3+dzLlpy5tI9sVj5eNiIwdR+1p4CUVH7RYoE89/JT5C8/C/NXJyFfIN0lxJZ/1hdLGng7iruA4HkGpo/CWsL7nHnyOL1Ld6mWNg0LKSBV/FtdRR4mYcb/iXl9c0j7XT5idLD/Eh0WDchRM/tCAzTO9FKX6NotpBfAYiSKsLZ3bg/ZElW2WviywRRxnuc+9z1RME45bDrV6D9bQryo5AGkeB5M161c/k303DqkF6Y+DmubMPi4Lqxtv0+ZkxtdR/GEksZgjfx+oHvYYu8lui+sJ6O1IW0D/i9d53MZZxlgO9AfFGLa2KZ6YaV1RNpokQO8sZNMSNva7fG6jt9DwvyK3wPYG/F7aCjvcvn+R3SIwT+o2Fz2APrase68iCoA8MyPm/ndATafKf/73H3QVTeYK+7l+O/Qfa4XDzzi2YTFzC/sdkLdwnoNwavvH+dMmkorgX2fhJDAPdzmHxqTEHyPodZjXeBlfv8xJHc/IL2AaJ2yHZKktfPrOnLdQe3lbNFZLs/xnqkBfvgf06LMMvU7kbmiQs4T5UQViuYyzYuQ821eWpkCUNhHQzmx/4QKRVT7qm2k8AMFteh6i0zveKtMK5om0zpOpStRIV/9iL9jl1Q2SbaF/XRabneoIgLW1gfeKEXrOXLmnH6O47+2kd7qC6S7hdj6r7REgPQwACJ3pMncaR7i5530fLwPkAwLRdRkteDk2fl8gHQ38/zvGjAi/AeA94jt+L5A+oRWBYtngOjdBLouD6n3mNFjBjgIiz3vcv120Ax/gvH9BKM/PBKu2pZYh/O1pYlV3nlGaQT3ORJJ4CK6tqIwPcNaZVXeCiFlYyuebbcLXZeFI3bEAMwt/+Q8/0XPWOCqG9KeFCAALeyjVliDOt4tMPr34XsApLC1fsjxt4a1S1cMMBnPp4Yc6RXSGuoUCCkgVXVfF9IT+FV03cHpPhVmydFIEyruXANIT/LoE+Dd95zXRH5XSfeb+d39IW+7qU0Nw4429H5YA75ne3v1ad3noqVMtKujxUWFP8PuK3T/V/QfrmPdsJ40BlGcTdw3sXiXGdYLwS+HI0BaPMnPj7Qf0UTzDM+XRuaoX34sbV7i6QKlfiUCiTKjVC5qQJTp0GIm93PkfXqpXEJXVbCc2LT1fRzV3gC6AnaoB5A2I+m0eZfxsjndN++SKI0nSXSCAlIsNHk56HfoP1qmd5gmGxPgvvxqW3PX1gbi20m+NtKdQnz9ZIagOsdTSyBtruT6f0bXYu4sAJfv+T1m2BRvII0AcIxE6gyImM5EUmTxzrBL02D+Y1BdYcbz6LwLo+N5/nqGAKY4yxw4ylbHRM8zjXyf5XwARo8Y6ZySwMQAqephuxwsYcdIMa44E428x7rD8P05RN+xJIpJoZERnwAoYsN9k0ED9sYOYb3ghbgtDMBBvSI8IxoaW6/oRS2PesLGyFpKAJNQnheQGtSd1XfUE8ALO2IRXTfwOwADPDdsjWZKWLujuaU/gMw8A0j/7FE2TBY/MEBN5nh94MvL7x6kePWj+25UWeGytY7580FIl9Wz3T3aEqD7SUhrWCHK63nOkyTIQLZHfmeGnHaAaac959cprCfUC8IRc5nqV2ncx17hOJ/Q/WQ/IM0hGkrA8KOt3n/2cEO13RO2UOw+CrkGSuQKkG2lAVGBYo5z70utdDijQhF1PiEg9fD1tEFwz8nfh9Qi1V40XiyHHnex3P4j7+nXav2jRLme0ugPQvy8IUXcUdhRLGse175zEDoh83ZNSLswldI9DNwfGUB1nkcHHhaOLDZFA2m0uu0MUjeQMu9fCyvXoMBWzgud8nK32mjQwrADnhiQJIEGbPcn2DTX8yBtHV0eB0gpTADAwO0NNf9Aol5GPwMQZycApJAg7zGAdLpHGDfNNPrxGI8BSqpu4Dvm6xt0X+zwUhEkuRdi+2zk+hZRrpEepJ2FzvgJDDVBJZwYkJY6QFr8UUjbBaNAwhV+IAMo8oSEReEDHUMKSGPOz/gppBafPPkMaXoe1w2T9snhaF4Ibje7D0eAlGgL5/NgWEvorngRHsCmuo7LRv/hWwAAEWhJREFU9UFYg5oneHrUcxrn+zR/OzaszAyqL1zl5qcG0lhzZUgLEGjzXfwOKv4hnGaWDaRhBdoBHyDVg7850UsKIL4T8pcdKfKJM9uqbZ9wG8HqenTGgRjwczWON/C2dAOoh0F/D4C0tqjjoJEyo/10mdJkkVy7vszxCNBq/U2+av23Qny+NlMsaxGI54iP2f5+gwcARSxifMeNavL4tXDERceRSMOORLomFNNJ4wKp3WH+E9b2TIS5zmgLUtWUV4BXxzdV+wujy6TST9PgoxaWouM6QIpw84107rHT5fpc5jXx+ADjGKffBFAfr4UGmxco27+NvnaSmXZIS5QM8AHY/Q6NroMDpJwGBiBsoa9Q+H+HtDoIc0mekWdEImX73NDYOrndrGKkthydR2Sh6WQvIDWuWMH+mev4OocpA5AabfxYiE0UIT15XuKRN1TyJQbgDvNoi84h7q8aSFUaWNjTQJpd/FBI20E92zMULZHCfBFIEEhLKZ9v4NpG728NKW0uMJDoHS4v7N5tXXw9M+z0sS9Duh3ftjGNrt+ElJdBwJSKW4QUkAaqkEgdALhBGic0bXsjTS5tXyynim7yrrxOauFpWbYpQSYOpG7Q9KP9CUg7DRkpc7rdJEXKSnnZ8JPkL/auLX0oyidEPfy2hYK/d+R3FLc38j7pielwo94AT0gaUL2+QiOHlW0rYPpznuMFpPxtRSzoxQXS3dx+c4wOA6nhjkgbZAfeC5urrdkRWmi3fVh7AMRIUuZzyAET90DqEtId120igAN9Gz8w9CAsdthmEMS/wB9I1UC386EBp92v+DtU25ec/hgY6a4PU5YBpJDIs1wTCVTodCNP2OEWGX1/SCwweAFpNL/C2j3IHiPgUYkPkJaE1aJRxA48lcN1sYE0rM0p8B9G+9omgE0MRKbkiLLPMcp+qQeQVtDzdk53Ln8zVPviNU4dY+oUAVIuL8wW+fGA1KAlRh2jcMnQmGZGj4koIL2W08bC1HpdVlXmwa72ICANvMJpwoxQJZC2JnpLSVt8svwn6xrJGXW7yWkkmULFX5nbKa7E6f7mFcbrm9F5I+8S2Wtf4xTU6nyAQLRll1vUQdDHnH6e/PbHNO3y5BzT57/I9L0QHyxpKlbmkjSaVeIzoFUD2T5/mOkvDmmVpgtT57Du+FMNPsElI9Xp6IHjQspuFVHtsdqJGTg/pPzoVIeESoeV6WPCemEFHeQUuu7mdEOugdHUBhP+jtXdJq5y88KJXskOazVW5cmDIF+XQUll3el6OoXNDreMNRXQu3kGKNt94Gp/FyBfSXO40b/ge4pywa6IMgCUsTizJOyUGxPUMS7An+PwWvmduiYj5XfZLqy2wgb+yeEAqI1j66XqBtekQSG9e2uu0Y4H+wAptrH2i00nErYFhXvDmAhIEg7A59EK6TrienhYay82L2DDtbiOkLZtiXS6kc9R4YgXB0BV2XrNvC8w+sOL3L52mTCJzHf4GriJ0+wbdlT7e0LeQJqv+4eazNZy28M9ra0HkGJRcUDI8Skut9Mnei+kpeu/Ez0Z0gu19rftdhxO7yyjr5kH2KBOX3CbktQZaG+UlSVSrdqHEwBS0IkkUe1UUhc7rb+/sqmc2bSLnCAO0Cc2tQ7IFa2LPbd4+gGk+10sgP76EikWrjoNHK3+65ReOE2KOsvlESdcJLd8xwex2DultohXiE95niDKR+atKu4oFqSWC+KR38A/MOw4xT/kD7bKIf81BhuokYcaYQbYgBjSkt1/dFj4SkYIrkxQObH6/xSDEVR2e7FptlsCCuuFk1ecGR6uPOaunYBpY/yS833Dle8bXBaoyZAyMnxAEB32Q6MP/Cek3LH8pPhY9ZAJiwIrXP0K0gNABar8BlOLCmvHc5PXJ+j2iPi3wq6H3VXYggmCN8Db9P58jvN3BjT4F2KnF2zEMK/AewISGOzFANunQtoGONkYB9g2iwlstY6j7Mv3KzU1xqQRcPeJYCjahxUACOn0/0J6O6w9UYA+QD8zJooC5gnqB8BpaqRLar1e5Q9pVbd9yGlvTPCbDOkPbbSc+f0PQxr8Oqx9QpEm8v3a7iNhzZd77DoT3RXSfQabJuCryq5dSrOAKQCeH2s4PHgJIQLpncJ1uT0cqWMxbL/wsoAtug73EwDmdxzG1NaONTDqSgOo7QnF1pDQvg3CjsRqm0CQ302JACnoWqLt5oHIG/6VIdccUajUfPzYDiv26ri7nIDaKuoHmG6AjP4WMBs95vuarAIC0s61DqQAUPiKFg0YLZtWTJCi+XyZUzpZXjf5T3LLtxnOLia9wPQ6UYWvNLpTiNcmthDhFsW+0mhYSySfG/UFkKbFgqgidJL3jcbHIBrKg+MWtzQX9uC1EXcVdzJz99K79K4kZHQopommikT3BMKqw6Kz/st7EowCKvPbe25wMKiEB1pE4gl577+vkpiHsJd+4tfvwhr0z7N5zHWFPezn6Lr4CgRwmUH5PvfigaNaRsJjyyoA65GwMzH5aGcq7snuycOj/2BxB36iP3ulE9L2bZy9UOxK4xIjPDxE3G5GzxhtjgnyRAPMsfDygV2HcEzZlZ34EKONR7n7QXRbRNKYGtKa1Nvmt1hMiPANZpyDje/v2P0leuwUHxTSmp6dzxUcZoJRJvjiphlxmzl1VHmuDWuNBhPJFqM8qxIF0hQFppvEN0oK+1YH++m7VPnOimby7l4d1MEjc0S5XNK4VIaySxSY+g1gP1D16rim1JCQRFrFEXjxSO2hJxBtR2k06zxepraZLZuXTpLnXXmKfOEVy+GVA6Jv+tpFjUNKHuhXIOaKCrHcRxoN6z3ymGmx3YxUrMDUUDYBpuMaFAW6FHYxAxv85TCzY5sefO+wXRCr1JNCmiZrCphX5HFDSDs8z9QdrRgqPlZi4fKChYQhLiDFnv3zQ1paQL7IAxLB0LB2aULaM0Laf3SSk5/OM6zdSkDjw9p1Biq13wIQBt9CXT+VxgJKo7O/ROovlToDSZlFYP+CBAQgI+mi+PaQMjE4q+lGmkU6X2VG4Top3kwJacIz6gLJEeYALIbAb3Yqt8uUkNp6WRwhjoPFNAAFzC3jQjoO0p8cnX5gQki/xzbV03z45FbzsXHh6JBetYaHxLOUzhO6j0CVDaSFousINztsh1zEZZ6uJ+lIf4O71mgGNmzthBZyfZjdlphfpPIHcCAKFoZgY8VKOUnrAdhNi4x2wIR2nd2u3M9tXqLeWBi6meJBKr06rG3KMwy+mXycwnW6jduze1hv6Ahx34QN1DCHRCYO8BGbISZxnccooMwOjCWaw2UYE+LTspgHMCncwu2Efo1NFfDx7hHSYweeLYvp/ppEgRSUSnQx0ZcKTAEmvBX0h8/rytduayHv7VUk5zUql7NJQl1Qv1wublIiSRLTu6EMlygvYPW6j35OQLUPJg6kAEx7zzx2RLXtfb2ygTboMFXWzZslW3cdL0+/9DT54suW3LUr1Tn4xDnX9O+k0pfGBVEG0sePaScWpJTHGwgAKixGwDcUqkgDatz6PkCaYYcN6X3N2FqI4+VgM2rAVxzaYFDAvLL/qYrTJOyowfAYgAMy0ousqHKeWGBAvjhOD/mmcpmRX109iwfq6PKY+en7sE43lesH95lGYX/HeuRdX9dPEVb6XT6H1QZS+4rjASENwu5bP9TSDUaRNFPs8ocjB3jo+5BDIhw5VjCQxmCRarcL8yJCHKceD1TmmeKBnb4RTtUphdunoQ+f3EBqUyrHIWkq0ITLYfApUsdU1c90e6RooFVtaKdZj+uXyuliJxW1W8C0yQu25SI/m6+Z7jZhvmTaeYVdvHTyUMcwIq26Nj9DBm9M/nCftI+YTGd+pui+ovqqG0jR39O4bZF+huq72YFMorqcVzrnZ/OgLo+HOswjpNGQ+049XQ81QaVVB0htOozohciRdFsdQP3x6zryw9VN5OOnt5VL2pbKWXU6E6hWyLmpBKoNyuSy5sV6H71NObHAGfaVThNzyK8SPAk0obbjHgdANyqZKNMKpsvU/NtkRsEMecDgEXLkpKHyldfayd27U51dS/YvSuBbi7MItog2VYJo4kDqGvgBt7O6Z1ijI8cbWK5B5JVf7NULjMz0YsObizSBmLDVodhyxAPRagGp570HkFaZhru9vNLxb4+qyujdpgkCqWc5PIDU1R/8TQdOunZ/iwFSV9jYlXh3n/Nuj9h6e/fD2G2wsX09tl+GPfIwx5hXmWPHmzuMTm9PgFTwwspkiZ089sn32/R2UkTHj+6+fjFD/ufWbHn/UQVySesSOSe1Qt4muspZorP6L9OyrBIlpaqFqlbx1X3bLlfdxSZs7QRgFvUfo8iqHCdbHXijTO80RYpWc9Q/l/DPp4pBo+T5w0+SodU95MefZjk8sbd9agD9hehZolOVdL4lARBNAqnnwEwCaRJIk0AaTX2JFsvN/H8n+4zPH5ykft6VIje82EC+uShLPnZaO3lHYUDOJUkVfxedrUC1XC5rVqrU/xVtAlHH9EWDavVW7Yv6j5adBo8kIB0jW3a9RWYEpqj/MomW82Tzigmy9xFXyVE3HiHXPVkq3/ukhcOHn3hSiAbQ56U+f8DZtZQEUo9BkATSJJAmgXRPgNTeR96d7scRvUq0WwHQ16wO74zKQ37zXpp8746m8vEz2so7O3WUM+t2llNJUp3JoIoDpJWU2qaTUv8TB9Lr1EHMHQeOkkUDRslW3W6SGUXTSPKcS+A5V2aVTJD9T7hYXjd5qHzm+UK58ZvM6OPzvueJYIOwzxX9iuryEF3PktqfNrbeSSBNAqlHHZNAmgTSPQVS+7mVUn23iJVE70SAaaM3qH73cT35/uom8rkr2si7D+wgZ6V0Vgc8wwQwD2efZhOg5gYify51AylAtH0EQEfLNj1ukPUKpkuRM09Jnq2KJ8ujzzxXTl04UP7jxfaO65Jbdbf9QeHiheMDN4ubiXoTZfgCZhJIPQZBEkiTQJoE0poAUvsdVvhLiC4lWkL0GAHV55HVfqjOu6JB9cev68r3724in7kwV64aUCQXNSmTMwhQ59fTUipOl1rT3FJ+pKUKSCfJQlLbcYJ9m543yDr5t0mRO1u273W9HAbwnD9QvvxaO7ljR91o8PxBOL9j/lr8TGX7L9E9bPMdRpSVEGAmgdRjECSBNAmkSSCtSSA1n+sQZRP1JDqDgDREoPpxxJ4KUNsRDao7ttSRXz3XQD57Wa68PbtUOfzjL6NrmllyYRuSSHsPl1lDJsi2Pa8nCXSa2nXU79jL5KxF/eV/32mlT6w3bZ7fCOfvpRvFTsr3BXqeQHkfTdcAUWbc+iWBNCa9JJAmgTQJpPsWSN2UTtSB6GSiZQRs+KXJ9oikClD92Vn93/LfdPmvcS1luDAgl4pOclbjLiSRjpCi4yKZpv7iealcufoAuXlrA6cuuwy1XYPnJgZPqOwHS9g8t4iUhMAwCaRJIK2SN0kgTQLpvgdSM1x9uloMqosJ7P5DtDsiqfIP8vDP+E2vZ8hX/9pCTmx6oExvMENalbfKObf3kdt+SHfA0/6xnl5x30RpPk7PE+g6mKXilLjlTgJpEkiTQJoEUt/+uP8CqftdMdGFRKuItkUkym81mMJP9V/hNnLk8KHy1ffzdHF3stru/LP+faJZREdR+o3iAmESSJNA6uZ7EkiTQOrbH387QGpTPSKc0L+UaFNkZf17o7wA1q3sFbBZSaJvEI2k+64JgWUSSJNAGpNvEkiTQPr7AlKT4PSPf8X/EnGj+laYR9h9RQQf1sJqgWUSSJNAGpNvEkiTQPr7BVJQGtE5RO8YJy+B7ic6YI/AMgmkSSCNyTcJpEkg/X0DqU2diZ4g+lbq/yNlVgl2SSB1DaIkkCaBNAmkf3QgBeH8zxHSvQKfBNIkkMYpexJIk0CaBNJowsr+GQmDXRJIXYMoCaRJIE0CaW0C6f8DkSlwQ1Wc5xAAAAAASUVORK5CYII=" alt="Alman Liseliler Kültür ve Eğitim Vakfı · ALKEV Özel Okulları"></a>
+      <span class="ver" data-in style="--i:1">V2.0 · 2026–27</span>
+    </div>
+    <div class="hero-body">
+      <div class="eyebrow" data-in style="--i:1">Etkileşimli Rehber</div>
+      <h1 data-in style="--i:2">Yapay Zekâ <b>Eğitim Politikası <span class="yr">2026–27</span></b></h1>
+      <p class="motto" data-in style="--i:3">“Öğrenmenin yerine değil, öğrenmenin emrine.”</p>
+      <div class="who" data-in style="--i:4">Rehbere nereden başlamak istersiniz?</div>
+      <div class="roles" data-in style="--i:5">
+        <button class="role" data-role="ogrenci" aria-pressed="false">
+          <svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c2 2 10 2 12 0v-4.5"/><path d="M22 9v6"/></svg>
+          <strong>Öğrenciyim</strong><span>Neyi yapabilirim, neyi yapamam?</span></button>
+        <button class="role" data-role="ogretmen" aria-pressed="false">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="1"/><path d="M8 20h8M12 16v4M7 9h6M7 12h10"/></svg>
+          <strong>Öğretmenim</strong><span>Düzeyler, yönerge ve değerlendirme</span></button>
+        <button class="role" data-role="veli" aria-pressed="false">
+          <svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+          <strong>Veliyim</strong><span>Evde nasıl destek olurum?</span></button>
+        <button class="role" data-role="yonetim" aria-pressed="false">
+          <svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+          <strong>Yönetim</strong><span>Veri güvenliği ve dijital iyi oluş</span></button>
+      </div>
+    </div>
+  </div>
+  <svg class="mosaic" data-mosaic="hero" preserveAspectRatio="none" aria-hidden="true"></svg>
+</header>
+
+<!-- ================= NAV ================= -->
+<nav class="nav" aria-label="Politika bölümleri">
+  <div class="wrap">
+    <a href="#yzp-genel">Genel Bakış</a>
+    <a href="#yzp-ogrenci">Öğrenciler</a>
+    <a href="#yzp-ogretmen">Öğretmenler</a>
+    <a href="#yzp-veli">Veliler</a>
+    <a href="#yzp-yonetim">Yönetim</a>
+    <a href="#yzp-durustluk">Akademik Dürüstlük</a>
+    <a href="#yzp-ekler">İzleme ve Ekler</a>
+  </div>
+  <div class="bar" id="yzp-bar"></div>
+</nav>
+
+<div class="short" id="yzp-short" aria-live="polite"><div class="wrap">
+  <h3>Size özel <em id="yzp-short-t">kısayollar</em></h3>
+  <div class="cards" id="yzp-short-c"></div>
+</div></div>
+
+<!-- ================= 1–2 GENEL ================= -->
+<section id="yzp-genel"><div class="wrap">
+  <div class="kick rv">Bölüm 1–2</div>
+  <h2 class="rv">Giriş, Vizyon ve <b>Denge</b></h2>
+  <div class="cols">
+    <div class="rv">
+      <p class="lead">Yapay zekâ araçları; öğrencilerin bilgiye ulaşma, yazma, problem çözme, kodlama, görsel üretme, çeviri yapma ve öğrenme süreçlerini destekleme biçimlerini hızla değiştirmektedir. Bu değişim okullar için önemli fırsatlar sunarken akademik dürüstlük, veri güvenliği, yaşa uygunluk ve eleştirel düşünme bakımından dikkatle yönetilmesi gereken sorumluluklar doğurmaktadır.</p>
+      <p>Bu politika; okulumuzda yapay zekâ araçlarının <strong>güvenli, etik, pedagojik ve yaş düzeylerine uygun</strong> biçimde kullanılmasını sağlamak amacıyla; <strong>6698 sayılı KVKK</strong>, MEB'in “Eğitimde Yapay Zekâ Politika Belgesi ve Eylem Planı (2025–2029)” ve “Eğitimde Yapay Zekâ Uygulamaları Etik Kılavuzu” ile UNESCO'nun eğitimde üretken yapay zekâ rehberleri esas alınarak hazırlanmıştır.</p>
+    </div>
+    <div class="rv">
+      <div class="note" style="margin-top:0"><h4>Temel İlkemiz</h4>
+        <p class="quote">Yapay zekâ öğrenmenin ikamesi değil, ivmesidir. Zihne kaldıraç olduğunda ufuk açar; zihnin yerine geçtiğinde düşünceyi körleştirir.</p></div>
+      <div class="note yel"><h4>Yaklaşımımız</h4><p>Bu teknolojiyi yasaklamak yerine, <strong>bilinçli ve kontrollü</strong> bir kullanımı destekliyoruz.</p></div>
+    </div>
+  </div>
+
+  <h3 class="sub rv">Fırsatlar ve Riskler Dengesi</h3>
+  <div class="seg rv" role="group" aria-label="Görünüm" id="yzp-bal-seg">
+    <button data-v="b" aria-pressed="true">Yan yana</button><button data-v="o" aria-pressed="false">Fırsatlar</button><button data-v="k" aria-pressed="false">Riskler</button>
+  </div>
+  <div class="bal rv" id="yzp-bal" data-v="b"></div>
+</div></section>
+
+<!-- ================= 3 ÖĞRENCİ ================= -->
+<section id="yzp-ogrenci" class="alt"><div class="wrap">
+  <div class="kick rv">Bölüm 3</div>
+  <h2 class="rv">Öğrenciler İçin <b>Kullanım Rehberi</b></h2>
+  <p class="lead rv">Yaş ve bilişsel gelişim düzeyine uygun, kademeli bir entegrasyon benimsiyoruz. Yapay zekâ kullanımı, <strong>yaşla birlikte artan bir sorumluluk ve bağımsızlık</strong> ilkesine dayanır. Sınıfını seç, senin için geçerli çerçeveyi gör:</p>
+
+  <div class="grade rv">
+    <label for="yzp-grade">Kaçıncı sınıftasın? <span id="yzp-grade-v" style="color:var(--red)">7. sınıf</span></label>
+    <input type="range" id="yzp-grade" min="1" max="12" step="1" value="7" aria-describedby="yzp-stage">
+    <div class="ticks" id="yzp-ticks" aria-hidden="true"></div>
+    <div class="stage" id="yzp-stage" data-s="1" aria-live="polite"></div>
+  </div>
+
+  <h3 class="sub rv">Bunu Yapabilir miyim?</h3>
+  <p class="rv">Yapay zekâyı bir “çalışma asistanı” gibi kullanmak eğitim felsefemizle uyumludur; ancak yaratım sürecinin ve düşünme eyleminin tamamen algoritmaya devredilmesi kabul edilemez. Aklındaki kullanımı ara ya da renge göre süz:</p>
+  <div class="tl-tools rv">
+    <input type="search" id="yzp-tl-q" placeholder="Ara: çeviri, kod, sunum, ödev…" aria-label="Kullanım ara">
+    <button class="chip" style="--c:var(--green)" data-f="g" aria-pressed="false">✓ Uygun</button>
+    <button class="chip" style="--c:#b38300" data-f="y" aria-pressed="false">! Dikkatli</button>
+    <button class="chip" style="--c:var(--red)" data-f="r" aria-pressed="false">✗ Yasak</button>
+  </div>
+  <div class="tl" id="yzp-tl" aria-live="polite"></div>
+  <div class="note yel rv"><h4>“Dikkatli kullanım” ne demek?</h4><p>Öğretmen yönergesi esastır. Çıktı doğrudan kullanılamaz; doğrulanmalı ve öğrencinin <strong>kendi sözcükleriyle yeniden yazılmalıdır.</strong></p></div>
+
+  <h3 class="sub rv">Kendini Dene</h3>
+  <div class="quiz rv" id="yzp-quiz">
+    <div class="q-top"><span id="yzp-q-n">Soru 1 / 6</span><span id="yzp-q-s">Puan 0</span></div>
+    <div class="q-text" id="yzp-q-t"></div>
+    <div class="q-btns" id="yzp-q-b">
+      <button data-a="g">✓ Uygun</button><button data-a="y">! Dikkatli</button><button data-a="r">✗ Yasak</button>
+    </div>
+    <div class="q-fb" id="yzp-q-f" aria-live="polite"></div>
+  </div>
+
+  <h3 class="sub rv">Ödev Teslimi Öncesi Altın Kural</h3>
+  <div class="note rv"><p>Her öğrenci, bir çalışmayı teslim etmeden önce aşağıdaki kısa kontrol listesini gözden geçirmeli ve yapay zekâ kullanımını ödevinin sonunda açıkça beyan etmelidir. <strong>Beyan edilmiş dürüst kullanım ceza konusu değildir;</strong> beyan edilmeyen kullanım ise akademik dürüstlük kapsamında değerlendirilir.</p></div>
+
+  <div class="gen">
+    <div class="rv">
+      <div class="out-h"><span>EK 1 · Teslim öncesi kontrol listesi</span></div>
+      <div class="check" id="yzp-check">
+        <div class="prog"><i id="yzp-ck-p"></i></div>
+        <ol id="yzp-ck-l"></ol>
+        <div class="res"><span id="yzp-ck-r">Altı soruyu yanıtla.</span><button class="btn ghost" id="yzp-ck-x">Sıfırla</button></div>
+      </div>
+    </div>
+    <div class="rv">
+      <div class="out-h"><span>Kullanım beyanı yardımcısı</span></div>
+      <div class="field"><label for="yzp-d-tool">Kullandığım araç</label><input id="yzp-d-tool" placeholder="ör. okul onaylı sohbet asistanı"></div>
+      <div class="field"><label for="yzp-d-why">Hangi amaçla kullandım?</label>
+        <select id="yzp-d-why">
+          <option>Araştırma sürecini özetleme</option><option>Karmaşık bir kavramı açıklatma</option><option>Dil, yazım ve gramer denetimi</option><option>Fikir geliştirme (beyin fırtınası)</option><option>Çeviri ve çalışma planı desteği</option><option>Kod üretimi desteği alma</option><option>Deneme / rapor taslağı oluşturma</option><option>Görsel ve sunum materyali üretme</option><option>Veri analizi gerçekleştirme</option>
+        </select></div>
+      <div class="field"><label for="yzp-d-me">Benim özgün katkım</label><textarea id="yzp-d-me" placeholder="ör. Ana fikri, örnekleri ve sonuç bölümünü kendim yazdım; bilgileri ders kitabından teyit ettim."></textarea></div>
+      <div class="out" id="yzp-d-out"></div>
+      <div class="acts"><button class="btn" data-copy="yzp-d-out">Beyanı kopyala</button></div>
+      <p class="tiny" style="margin-top:8px">Bu yardımcı yalnızca örnek bir metin üretir; öğretmeninin istediği beyan biçimi esastır. Yazdıkların bu sayfadan dışarı gönderilmez.</p>
+    </div>
+  </div>
+</div></section>
+
+<!-- ================= 4 ÖĞRETMEN ================= -->
+<section id="yzp-ogretmen"><div class="wrap">
+  <div class="kick rv">Bölüm 4</div>
+  <h2 class="rv">Öğretmenler İçin <b>Politikalar</b></h2>
+  <p class="lead rv">Öğretmenler yalnızca bilgi aktarıcı değil, teknolojinin yöneticisi ve öğrenme sürecinin pedagojik lideridir. Her dersin başında yapay zekâ kullanım sınırları öğrencilere duyurulur ve ödev yönergelerinde detaylı şekilde yazılır. <em>“Yapay zekâ bunu neden böyle söyledi?”</em> tartışmalarıyla eleştirel sorgulama kültürü teşvik edilir.</p>
+
+  <h3 class="sub rv">Kullanım Düzeyleri · 0–4</h3>
+  <div class="rv" id="yzp-lvbox" style="--lc:var(--navy)">
+    <div class="lv" id="yzp-lv" role="group" aria-label="Kullanım düzeyi"></div>
+    <div class="lv-panel" aria-live="polite">
+      <div><h4 id="yzp-lv-h"></h4><p id="yzp-lv-p"></p></div>
+      <div class="meter" id="yzp-lv-m" aria-hidden="true"><i style="height:25%"></i><i style="height:50%"></i><i style="height:75%"></i><i style="height:100%"></i></div>
+    </div>
+  </div>
+  <div class="note red rv"><h4>✗ Her Düzeyde Yasak Olan Kullanımlar</h4>
+    <p>Seçilen kullanım düzeyi ne olursa olsun aşağıdakiler her zaman yasaktır ve doğrudan <strong>akademik dürüstlük veya veri güvenliği ihlali</strong> kabul edilir:</p>
+    <ul class="ban"><li>Sınavlarda ve anlık değerlendirmelerde yapay zekâ kullanmak</li><li>Sınav sorularını, gizli okul materyallerini veya kişisel/gizli verileri sisteme girmek</li><li>Yapay zekâ çıktısını kendi özgün eseri gibi sunmak</li><li>Zorbalık, deepfake veya yaşa uygunsuz içerik üretmek</li><li>Öğretmenin açıkça yasakladığı görevlerde yapay zekâ kullanmak</li></ul>
+  </div>
+
+  <h3 class="sub rv">Ödev Yönergesi Oluşturucu <span class="tiny" style="font-family:var(--body);text-transform:none;letter-spacing:0">· EK 4 şablonu</span></h3>
+  <div class="gen rv">
+    <div>
+      <div class="field"><label for="yzp-y-ders">Ders / Sınıf</label><input id="yzp-y-ders" placeholder="ör. Türk Dili ve Edebiyatı · 10-A"></div>
+      <div class="field"><label for="yzp-y-odev">Çalışmanın adı</label><input id="yzp-y-odev" placeholder="ör. Roman inceleme raporu"></div>
+      <div class="field"><label>Düzey</label><p class="tiny" style="margin:0">Yukarıdaki düzey seçicisinden belirlenir: <strong id="yzp-y-lv" style="color:var(--navy)"></strong></p></div>
+      <div class="field"><label>Kullanım beyanı</label>
+        <div class="seg" id="yzp-y-b" style="margin:0"><button data-b="1" aria-pressed="true">Zorunludur</button><button data-b="0" aria-pressed="false">Gerekli değildir</button></div></div>
+    </div>
+    <div>
+      <div class="out printable" id="yzp-y-out"></div>
+      <div class="acts"><button class="btn" data-copy="yzp-y-out">Yönergeyi kopyala</button><button class="btn ghost" id="yzp-y-print">Yazdır</button></div>
+    </div>
+  </div>
+
+  <div class="cols" style="margin-top:20px">
+    <div class="rv">
+      <h3 class="sub">Süreç Odaklı Ölçme ve Değerlendirme</h3>
+      <p>Değerlendirme politikamız odağını salt son ürünün kusursuzluğundan; öğrencinin kendi çabasını, gelişimini ve etik araç kullanımını ortaya koyduğu <strong>öğrenme sürecine</strong> kaydırmıştır.</p>
+      <ul class="dots"><li>Süreci izleyebilmek adına <strong>taslak-revizyon döngüleri</strong> benimsenir.</li><li>Sözlü savunma, sınıf içi gözlem, süreç günlüğü ve portfolyo ağırlığı artırılmıştır.</li><li>Yapay zekânın sunduğu bir içeriği “doğruluk, tarafsızlık ve mantık” çerçevesinde eleştirip iyileştirmeyi (tersine mühendislik) merkeze alan görevler tasarlanır.</li><li>Tüm değerlendirme rubriklerine <strong>“yapay zekâ kullanım beyanı”</strong> zorunlu bir kriter olarak eklenmiştir.</li></ul>
+    </div>
+    <div class="rv">
+      <h3 class="sub">Öğretmenin Kendi Kullanımı ve Pedagojik Süzgeç</h3>
+      <p>Öğretmenlerin kendi kullanımlarında da şeffaflık ilkesi geçerlidir. Ders planı, materyal geliştirme, örnek soru hazırlama veya farklılaştırılmış etkinlik tasarımında yapay zekâdan destek alınabilir. Ancak üretilen her içerik, öğrencilerle paylaşılmadan önce mutlaka öğretmenin <strong>pedagojik, akademik ve etik süzgecinden</strong> geçirilerek doğrulanmalıdır.</p>
+      <p>Okulumuz, öğretmenlerin yılda en az bir kez yapay zekâ okuryazarlığı eğitimine katılımını beklemektedir.</p>
+    </div>
+  </div>
+
+  <h3 class="sub rv">Kesin Veri Güvenliği Sorumluluğu</h3>
+  <p class="rv">Öğrenci verilerinin yapay zekâ araçlarına girilmesi okul politikamızca kesinlikle yasaktır. Aşağıdakiler yapay zekâ sistemlerine (istem/prompt olarak) <strong>hiçbir koşulda</strong> girilemez. Sınıflarımızda yalnızca güvenlik testlerinden geçmiş platformlar kullanılır.</p>
+  <div class="tags rv"><span>Öğrenci ad-soyadları</span><span>Notlar</span><span>Sınav sonuçları</span><span>Rehberlik ve sağlık bilgileri</span><span>Veli iletişim detayları</span><span>Fotoğraf / video kayıtları</span><span>Okul içi özel yazışmalar</span><span>Gizli ölçme materyalleri</span></div>
+  <div class="note rv"><h4>Yasal Dayanak · KVKK</h4><p>Bu yasak yalnızca bir okul kuralı değil, aynı zamanda yasal bir yükümlülüktür. <strong>6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK)</strong> uyarınca öğrenci verileri kişisel veri; sağlık ve rehberlik bilgileri ise özel nitelikli kişisel veridir. Bu verilerin yurt dışı sunucularda çalışan yapay zekâ sistemlerine girilmesi hukuka aykırı veri aktarımı oluşturabilir. Okulumuz, KVKK'nın 10. maddesi kapsamındaki aydınlatma yükümlülüğü çerçevesinde velileri yapay zekâ destekli araç kullanımı hakkında bilgilendirir ve gerekli hâllerde açık rıza alır. Onaylı araçlar belirlenirken MEB'in “Eğitimde Yapay Zekâ Uygulamaları Etik Kılavuzu”nda yer alan ilkeler ve KVKK uyumu esas alınır.</p></div>
+</div></section>
+
+<!-- ================= 5 VELİ ================= -->
+<section id="yzp-veli" class="alt"><div class="wrap">
+  <div class="kick rv">Bölüm 5</div>
+  <h2 class="rv">Veliler İçin <b>Rehber</b></h2>
+  <p class="lead rv">Sağlıklı ve tutarlı bir dijital vatandaşlık kültürü için ev ve okul ortamının uyum içinde olması gerekir. Velilerimizin temel rolü, çocuklarının yapay zekâyı bir “ödev yaptırma makinesi” olarak değil, <strong>öğrenmeyi destekleyen bir asistan</strong> olarak görmelerini sağlamaktır.</p>
+
+  <div class="qcard rv">
+    <small>EK 2 · Doğrudan cevap vermek yerine sorun</small>
+    <div class="qq" id="yzp-pq"></div>
+    <button class="btn yel" id="yzp-pq-b">Başka bir soru göster</button>
+  </div>
+
+  <h3 class="sub rv">Evde Yaklaşımlar</h3>
+  <div class="dd" id="yzp-dd"></div>
+
+  <h3 class="sub rv">Okulla Etkin İletişim</h3>
+  <ul class="dots rv"><li>Kademeye uygun olarak hangi araçların okul onaylı olduğunu doğrudan <strong>sınıf/ders öğretmeninden</strong> öğrenmek.</li><li>Evde şüpheli bir durum, veri güvenliği riski veya aşırı bağımlılık fark edildiğinde vakit kaybetmeden <strong>okul rehberlik servisine</strong> başvurmak.</li><li>Okulumuzun gönderdiği bültenleri takip etmek ve yapılan eğitimlere katılmak.</li></ul>
+</div></section>
+
+<!-- ================= 6 YÖNETİM ================= -->
+<section id="yzp-yonetim"><div class="wrap">
+  <div class="kick rv">Bölüm 6</div>
+  <h2 class="rv">Okul Yönetimi, Veri Güvenliği ve <b>Dijital İyi Oluş</b></h2>
+  <div class="cols">
+    <div class="rv">
+      <p class="lead">Temel önceliğimiz, bu teknolojik dönüşümün okulumuzda <strong>adil, kapsayıcı, güvenli ve şeffaf</strong> bir ekosistemde yönetilmesidir. Öğrencilerimizi geleceğin dünyasından izole eden yasaklayıcı bir yaklaşım yerine; onlara bu gücü etik değerlerle, eleştirel bir akılla ve evrensel bir vizyonla yönetmeyi öğretiyoruz.</p>
+      <p>“Tasarım yoluyla gizlilik” (privacy-by-design) prensipleri çerçevesinde, öğrenci verilerini koruyan kapalı sistemlerin ve okul tarafından onaylanmış güvenli araçların tercih edilmesi yönetimsel önceliğimizdir. Onaylı araç listesi <strong>yaşa uygunluk, veri güvenliği ve eğitimsel fayda</strong> gözetilerek bilişim teknolojileri bölümü koordinasyonunda belirlenir.</p>
+      <p>Kurumsal uygulamalarımız MEB'in ilgili politika belgesi ve etik kılavuzundaki ilkeler doğrultusunda yürütülür; bu belgelerdeki güncellemeler politika revizyonlarımıza yansıtılır.</p>
+    </div>
+    <div class="rv">
+      <div class="note yel" style="margin-top:0"><h4>Dijital İyi Oluş</h4><p>Yapay zekâ kullanımı yalnızca akademik bir konu değil; öğrencinin öz güveni, dikkat becerileri ve psikolojik sağlamlığıyla da doğrudan bağlantılıdır. Öğrencilerimizin teknolojiye aşırı bağımlılık geliştirmemesi ve <strong>kendi zihinlerine güvenmeyi sürdürmesi</strong> hedeflenir.</p></div>
+      <div class="note red"><h4>Deepfake ve Sahte İçerik</h4><p>Yapay zekâ ile görsel, ses veya video üretimi yalnızca eğitimsel ve etik amaçlarla yapılabilir. Bir kişinin izni olmadan görselini değiştirmek, sahte ses/görüntü üretmek, okul topluluğundaki bireyleri küçük düşürücü içerikler oluşturmak ve deepfake üretmek <strong>kesinlikle yasaktır ve ağır disiplin suçudur.</strong></p></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ================= 7 DÜRÜSTLÜK ================= -->
+<section id="yzp-durustluk" class="alt"><div class="wrap">
+  <div class="kick rv">Bölüm 7</div>
+  <h2 class="rv">Akademik Dürüstlük ve <b class="r">Etik Duruş</b></h2>
+  <p class="lead rv">Yapay zekâ çağında akademik dürüstlük, yalnızca intihal yapmamak değil; insanın kendi düşünsel emeğine ve zihinsel potansiyeline sahip çıkmasıdır. Yapay zekânın ürettiği içerikleri kendi eseri gibi sunmak, okulumuzda <strong>geleneksel kopyalama vakalarıyla eşdeğer</strong> kabul edilir. Asıl kayıp öğrencinin alacağı düşük not değil, <strong>kaçırdığı zihinsel gelişim fırsatıdır.</strong></p>
+
+  <h3 class="sub rv">İhlal Şüphesinde Pedagojik Süreç</h3>
+  <p class="rv">Cezalandırıcı değil, <strong>“eğitici ve düzeltici”</strong> bir süreç işletilir. Amaç öğrenciyi damgalamak değil; kendi düşünsel emeğine sahip çıkmasını sağlamaktır. Adımlara tıklayın:</p>
+  <div class="steps rv" id="yzp-steps" role="group" aria-label="Süreç adımları"></div>
+  <div class="step-body rv" id="yzp-step-b" aria-live="polite"></div>
+
+  <div class="cols" style="margin-top:8px">
+    <div class="note red rv"><h4>Tespit Araçları ve Kanıt İlkesi</h4><p><strong>Yapay zekâ tespit yazılımlarının (detektörlerin) çıktıları, tek başına kanıt olarak kullanılamaz.</strong> Bu araçların hata payları yüksektir; özellikle çok dilli öğrencilerde yanlış pozitif sonuçlar üretebildikleri bilimsel olarak gösterilmiştir. Değerlendirme detektör puanına değil, <strong>süreç kanıtlarına</strong> dayanır: taslaklar ve versiyon geçmişi, süreç günlüğü, sınıf içi gözlemler ve öğrencinin sözlü açıklaması birlikte değerlendirilir.</p></div>
+    <div class="note rv"><h4>İtiraz Hakkı</h4><p>Öğrenci ve velisi, verilen karara karşı <strong>yazılı olarak okul yönetimine itiraz etme hakkına</strong> sahiptir. İtiraz; kararı veren öğretmenin dışında, okul yönetiminin belirleyeceği bir komisyon (ör. ilgili bölüm başkanı, rehberlik servisi ve idare temsilcisi) tarafından süreç kanıtları üzerinden yeniden değerlendirilir. İtiraz süreci sonuçlanmadan öğrenci hakkında kesinleşmiş bir işlem uygulanmaz.</p></div>
+  </div>
+</div></section>
+
+<!-- ================= 8 + EKLER ================= -->
+<section id="yzp-ekler"><div class="wrap">
+  <div class="kick rv">Bölüm 8 · Ekler</div>
+  <h2 class="rv">İzleme, Değerlendirme ve <b>Güncelleme</b></h2>
+  <p class="lead rv">Bu politika statik bir kural seti değil, <strong>yaşayan bir dokümandır.</strong> Uygulanması ve güncelliği; öğretmen geri bildirimleri, akademik dürüstlük kayıtları ve teknoloji kullanım değerlendirmeleri yoluyla izlenir. Okul yönetimi ve bilişim teknolojileri bölümü tarafından her eğitim-öğretim yılı başında gözden geçirilerek güncellenir.</p>
+  <div class="stats rv">
+    <div><b>Yılda 1+</b><span>Her öğretmen için yapay zekâ okuryazarlığı eğitimi</span></div>
+    <div><b>Her Yıl</b><span>Politika gözden geçirme ve güncelleme döngüsü</span></div>
+    <div><b>5 Düzey</b><span>Ödevlerde şeffaf yapay zekâ kullanım çerçevesi (Düzey 0–4)</span></div>
+  </div>
+  <h3 class="sub rv">EK 3 · Dayanak ve İlgili Mevzuat</h3>
+  <ul class="refs rv"><li>6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK)</li><li>MEB, Eğitimde Yapay Zekâ Politika Belgesi ve Eylem Planı (2025–2029)</li><li>MEB, Eğitimde Yapay Zekâ Uygulamaları Etik Kılavuzu</li><li>MEB Okul Öncesi Eğitim ve İlköğretim Kurumları Yönetmeliği (ilgili hükümler)</li><li>MEB Ortaöğretim Kurumları Yönetmeliği (ödül ve disipline ilişkin ilgili hükümler)</li><li>UNESCO, Eğitim ve Araştırmada Üretken Yapay Zekâ Rehberi</li></ul>
+</div></section>
+
+<footer class="end">
+  <div class="wrap">
+    <p class="big">Amacımız; yapay zekâyı <b>anlayan, sorgulayan,</b> etik biçimde <b>yöneten</b> ve kendi düşünsel emeğine sahip çıkan bireyler yetiştirmektir.</p>
+    <!-- PDF'i siteye yükledikten sonra aşağıdaki href değerini dosyanın adresiyle değiştirin -->
+    <a class="btn yel" id="yzp-pdf" href="ALKEV_YZ_Politikasi_2026_2027.pdf" target="_blank" rel="noopener">Politikanın tam metni (PDF)</a>
+    <div class="fine">Yapay Zekâ Eğitim Politikası · V2.0 · 2026–27 · ALKEV Özel Okulları</div>
+  </div>
+  <svg class="mosaic" data-mosaic="end" preserveAspectRatio="none" aria-hidden="true"></svg>
+</footer>
+
+<div class="toast" id="yzp-toast" role="status"></div>
+</div>
+
+<script>
+(function(){
+"use strict";
+var R=document.getElementById('yzp'); if(!R) return;
+function $(s,c){return (c||R).querySelector(s)} function $$(s,c){return [].slice.call((c||R).querySelectorAll(s))}
+function el(t,c,h){var e=document.createElement(t); if(c)e.className=c; if(h!=null)e.innerHTML=h; return e}
+function esc(s){return String(s).replace(/[&<>"]/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]})}
+function trl(s){return s.toLocaleLowerCase('tr')}
+
+/* ---------- mozaik (PDF'teki üçgen deseni) ---------- */
+function mosaic(svg,cols,rows,delay){
+  var W=1200,H=160,seed=svg.dataset.mosaic==='hero'?7:23;
+  function rnd(){seed=(seed*16807)%2147483647;return (seed-1)/2147483646}
+  svg.setAttribute('viewBox','0 0 '+W+' '+H);
+  var pts=[],x,y;
+  for(y=0;y<=rows;y++){pts[y]=[];for(x=0;x<=cols;x++){
+    var jx=(x===0||x===cols)?0:(rnd()-.5)*W/cols*.7, jy=(y===0||y===rows)?0:(rnd()-.5)*H/rows*.7;
+    pts[y][x]=[x*W/cols+jx,y*H/rows+jy];}}
+  var pale=['#e9edf8','#dbe2f4','#c9d3ee','#fae9eb','#f6d5da','#fdf3d3','#f9e4a6','#ffffff','#eef1fa'],
+      bold=['#a21629','#f0b91a','#203b7e','#016599'],out='';
+  function tri(a,b,c,cx){var f=rnd()<.09?bold[Math.floor(rnd()*4)]:pale[Math.floor(rnd()*pale.length)];
+    out+='<polygon points="'+[a,b,c].map(function(p){return p[0].toFixed(1)+','+p[1].toFixed(1)}).join(' ')+'" fill="'+f+'" stroke="#fff" stroke-width="1.2"'+(delay?' style="animation-delay:'+(500+cx*38+rnd()*260).toFixed(0)+'ms"':'')+'/>';}
+  for(y=0;y<rows;y++)for(x=0;x<cols;x++){var a=pts[y][x],b=pts[y][x+1],c=pts[y+1][x],d=pts[y+1][x+1];
+    if(rnd()<.5){tri(a,b,c,x);tri(b,d,c,x)}else{tri(a,b,d,x);tri(a,d,c,x)}}
+  svg.innerHTML=out;
+}
+$$('svg.mosaic').forEach(function(s){mosaic(s,22,3,s.dataset.mosaic==='hero')});
+
+/* ---------- veriler (politika metninden) ---------- */
+var BAL=[
+ ['Bireyselleştirilmiş Öğrenme','Öğrencinin hızına ve seviyesine uygun destek.','Özgünlük Kaybı','Öğrencinin kendi düşünsel emeğinden uzaklaşması.'],
+ ['Hızlı Araştırma ve Erişim','Karmaşık konuların basitleştirilerek açıklanması.','Bilgi Kirliliği','Yanlış, uydurma veya taraflı bilgi üretimi.'],
+ ['Yaratıcı İlham','Taslak oluşturma, görselleştirme ve fikir geliştirme.','Aşırı Bağımlılık','Eleştirel düşünme yerine hazır çözümleri benimseme.'],
+ ['Dil ve Yazım Desteği','Çeviri, dil bilgisi kontrolü ve ifade zenginliği.','Veri Güvenliği','Kişisel ve kurumsal gizli bilgilerin paylaşılması.'],
+ ['Kapsayıcılık','Farklı öğrenme ihtiyaçlarına yönelik erişilebilirlik araçları.','Dijital Eşitsizlik','Araçlara erişimde oluşabilecek haksız avantajlar.']];
+var STAGES=[
+ {k:'İlkokul',r:'1–4',h:'Keşif ve Farkındalık',p:'Dijital okuryazarlığın temellerinin atıldığı bu dönemde, yapay zekâ araçları yalnızca sınıf ortamında, öğretmen gözetimi altında tanıtıcı etkinlikler için kullanılır. Bu kademede öğrencilerimizin bağımsız yapay zekâ hesapları açması beklenmez.'},
+ {k:'Ortaokul',r:'5–8',h:'Rehberli Kullanım',p:'Öğrencilerimiz araştırma, kavram açıklama ve yazım desteği için veli onayı ve öğretmen yönlendirmesiyle güvenli araçları kullanabilirler. Bu gruptaki öğrencilerin, şeffaflık ilkesi gereği her kullanımda kaynak beyanı sunmaları zorunludur.'},
+ {k:'Lise',r:'9–12',h:'Bağımsız ve Sorumlu Kullanım',p:'Lise öğrencileri, okul politikamızın çizdiği sınırlar çerçevesinde onaylı araçları daha bağımsız kullanabilirler. Ancak ürettikleri her içeriğin doğruluğunu teyit etmek, eleştirel bir süzgeçten geçirmek ve kullanım beyanıyla kaynak göstermek tamamen kendi sorumluluklarındadır.'}];
+var USES=[
+ ['g','Araştırma süreçlerini özetleme'],['g','Karmaşık kavramları açıklama'],['g','Dil, yazım ve gramer denetimi'],['g','Fikir geliştirme (beyin fırtınası)'],['g','Çeviri ve çalışma planı desteği'],
+ ['y','Kod üretimi desteği alma'],['y','Deneme / rapor taslağı oluşturma'],['y','Görsel ve sunum materyali üretme'],['y','Veri analizi gerçekleştirme'],
+ ['r','Ödevi tamamen yapay zekâya yazdırmak'],['r','Sınav sorularını veya gizli okul materyallerini sisteme girmek'],['r','Kişisel verileri (fotoğraf, not, şifre vb.) paylaşmak'],['r','Çıktıyı kendi özgün eseri gibi sunmak (intihal)'],['r','Zorbalık (deepfake vb.) amaçlı veya yaşa uygunsuz içerik üretmek']];
+var CAT={g:['✓','Uygun kullanım','Çalışma asistanı olarak kullanabilirsin.'],y:['!','Dikkatli kullanım','Öğretmen yönergesi esastır; çıktıyı doğrula ve kendi sözcüklerinle yeniden yaz.'],r:['✗','Yasak kullanım','Hangi düzey seçilirse seçilsin yapılamaz.']};
+var LEVELS=[
+ {n:'Kullanım Yok',c:'#1d2330',p:'Bu çalışmada yapay zekâ hiçbir şekilde kullanılamaz. Sadece öğrencinin kendi emeği değerlendirilecektir.'},
+ {n:'Sınırlı Destek',c:'#203b7e',p:'Yalnızca yazım, imla, gramer veya dil kontrolü/çeviri için kullanılabilir.'},
+ {n:'Fikir ve Planlama',c:'#016599',p:'Beyin fırtınası, araştırma sorusu oluşturma, ön bilgi edinme veya çalışma planı hazırlamak için kullanılabilir.'},
+ {n:'Geliştirme Desteği',c:'#b38300',p:'Taslak oluşturma, kodlama desteği/kod açıklatma, veri yorumlama veya sunum önerisi için kullanılabilir; ancak nihai ürün tamamen öğrencinin özgün ifadelerinden oluşmalıdır.'},
+ {n:'Ortak Üretim',c:'#a21629',p:'Yalnızca öğretmenin açık izni ve ayrıntılı bir kaynak/kullanım beyanıyla mümkündür.'}];
+var CHECK=[
+ ['Öğretmenim bu çalışmada yapay zekâ kullanımına izin verdi mi?',1,'Önce öğretmeninin yönergesine bak ya da ona sor.'],
+ ['Yapay zekâyı hangi amaçla kullandığımı tam olarak biliyor muyum?',1,'Amacını netleştir: fikir mi, yazım denetimi mi, taslak mı?'],
+ ['Kişisel bilgi, fotoğraf, not, sınav sorusu veya okul içi özel bir bilgi paylaştım mı?',0,'Cevabın “Hayır” olmalı! Böyle bir paylaşım yaptıysan öğretmenine haber ver.'],
+ ['Yapay zekânın verdiği bilgiyi en az bir güvenilir kaynakla teyit ettim mi?',1,'Teslimden önce en az bir güvenilir kaynaktan doğrula.'],
+ ['Bu çalışmada “benim” özgün katkım ve emeğim açıkça görülebiliyor mu?',1,'Çalışmayı kendi sözcüklerin ve fikirlerinle yeniden ele al.'],
+ ['Yapay zekâ kullanımımı, ödevimin sonunda beyan ettim mi?',1,'Beyanını ekle; beyan edilmiş dürüst kullanım ceza konusu değildir.']];
+var PQ=['“Bu cevabı/konuyu bana kendi cümlelerinle nasıl anlatırsın?”','“Yapay zekânın verdiği bu bilgi sence doğru mu, nereden kontrol ettin?”','“Bu çalışmada senin özgün katkın tam olarak hangi bölümde?”','“Yapay zekâdan yardım aldıysan bunu öğretmenine beyan ettin mi?”'];
+var DD=[
+ ['Birlikte Keşfedin','Yeni araçları çocuğunuzla beraber deneyimleyin ve mantığını anlamaya çalışın.','Yaş Sınırını İhlal Etmeyin','13 yaş altındaki çocuklar için YZ hesabı açılmamalı; veliler çocukları adına kesinlikle vekâleten (proxy) hesap oluşturmamalıdır.'],
+ ['Süre ve Sınır Koyun','Evdeki ekran ve yapay zekâ kullanım sürelerine rasyonel sınırlar getirin.','“Ödev Yaptırıcı” Olarak Kullandırmayın','Çocuğun akademik sorumluluğunu tamamen algoritmaya devretmesine izin vermeyin.'],
+ ['Yanlış Bilgiyi Sorgulayın','Yapay zekânın “halüsinasyon” (uydurma bilgi) üretebileceğini hatırlatarak teyit alışkanlığı kazandırın.','Kişisel Verileri Girmeyin','Aile içi özel bilgilerin, fotoğrafların, adres ve şifrelerin sistemlere girilmesinin önüne geçin.'],
+ ['Önceden Planlayın','Ödev sürecine başlamadan önce yapay zekânın hangi aşamada (sadece fikir veya yazım kontrolü vb.) kullanılacağını çocuğunuzla konuşun.','Belirsiz Araçlara Dikkat Edin','Yaş denetimi sunmayan veya veri güvenlik politikası şüpheli olan platformlara karşı teyakkuzda olun.']];
+var STEPS=[
+ ['Öğrenme Diyaloğu (Sözlü Savunma)','Öğrenci ile öğretmeni arasında sürecin nasıl yürütüldüğüne dair bir görüşme yapılır. Öğrenci çalışmasının ana fikrini, kaynaklarını ve karar noktalarını kendi cümleleriyle açıklar; taslaklarını ve çalışma sürecini gösterme fırsatı bulur. Bu görüşme aynı zamanda bir değerlendirme kanıtıdır.'],
+ ['Süreç Kanıtlarının Birlikte İncelenmesi','Taslaklar, versiyon geçmişi, süreç günlüğü ve sınıf içi gözlemler öğrenciyle birlikte gözden geçirilir.'],
+ ['Telafi ve Yeniden Üretim Fırsatı','Gerekli durumlarda öğrencinin çalışmasını okul ortamında, yapay zekâ desteği olmadan yeniden yapması istenir. Bu adım bir ceza değil, öğrencinin kazanımı gerçekten edinmesini sağlayan bir öğrenme fırsatı olarak tasarlanır.'],
+ ['Tekrarlanan İhlaller','İhlalin tekrarlanması veya iyi niyetin suistimal edilmesi durumunda konu, rehberlik servisi ve okul yönetimi ile paylaşılır; ilgili disiplin süreçleri, kademeye göre MEB Okul Öncesi Eğitim ve İlköğretim Kurumları Yönetmeliği ile MEB Ortaöğretim Kurumları Yönetmeliği\'nin ödül ve disipline ilişkin hükümleri çerçevesinde yürütülür.']];
+var SHORT={
+ ogrenci:['Öğrenciler',[['#yzp-grade','Sınıfına göre çerçeve','Kademene uygun kullanım ilkesi'],['#yzp-tl-q','Bunu yapabilir miyim?','Uygun · dikkatli · yasak kullanımlar'],['#yzp-check','Teslim öncesi kontrol','6 soruluk liste ve beyan yardımcısı']]],
+ ogretmen:['Öğretmenler',[['#yzp-lvbox','Kullanım düzeyleri 0–4','Beklentinizi netleştirin'],['#yzp-y-ders','Ödev yönergesi oluşturucu','Kopyalayın ya da yazdırın'],['#yzp-durustluk','İhlal şüphesinde süreç','Eğitici ve düzeltici dört adım']]],
+ veli:['Veliler',[['#yzp-pq','Yönlendirici sorular','Cevap vermek yerine soru sorun'],['#yzp-dd','Evde yaklaşımlar','Destekleyin · kaçının'],['#yzp-durustluk','İtiraz hakkı ve süreç','Akademik dürüstlük değerlendirmesi']]],
+ yonetim:['Yönetim',[['#yzp-yonetim','Veri güvenliği ve iyi oluş','Onaylı araçlar, privacy-by-design'],['#yzp-durustluk','Kanıt ilkesi ve itiraz','Detektör çıktısı tek başına kanıt değildir'],['#yzp-ekler','İzleme ve mevzuat','Yıllık güncelleme döngüsü']]]};
+
+/* ---------- denge ---------- */
+var bal=$('#yzp-bal');
+BAL.forEach(function(b){bal.appendChild(el('div','row','<div class="c o"><b>'+b[0]+'</b><span>'+b[1]+'</span></div><div class="mid"><i></i></div><div class="c k"><b>'+b[2]+'</b><span>'+b[3]+'</span></div>'))});
+function segInit(box,fn){$$('button',box).forEach(function(b){b.addEventListener('click',function(){$$('button',box).forEach(function(x){x.setAttribute('aria-pressed',x===b)});fn(b)})})}
+segInit($('#yzp-bal-seg'),function(b){bal.dataset.v=b.dataset.v});
+
+/* ---------- sınıf kaydırıcı ---------- */
+var gr=$('#yzp-grade'),tk=$('#yzp-ticks'),i;
+for(i=1;i<=12;i++)tk.appendChild(el('span','',i));
+function grade(){var v=+gr.value,s=v<=4?0:v<=8?1:2,S=STAGES[s];
+  $('#yzp-grade-v').textContent=v+'. sınıf';
+  $$('span',tk).forEach(function(t,j){t.className=j+1===v?'on':''});
+  var st=$('#yzp-stage');st.dataset.s=s;
+  st.innerHTML='<div class="n"><small>'+S.k+'</small>'+S.r+'</div><div><h4>'+S.h+'</h4><p>'+S.p+'</p></div>';}
+gr.addEventListener('input',grade);grade();
+
+/* ---------- trafik ışığı ---------- */
+var tl=$('#yzp-tl'),tq=$('#yzp-tl-q'),tf=null;
+function drawTL(){var q=trl(tq.value.trim()),n=0;tl.innerHTML='';
+  USES.forEach(function(u){if(tf&&u[0]!==tf)return;if(q&&trl(u[1]).indexOf(q)<0)return;
+    var d=el('div','it '+u[0],'<i>'+CAT[u[0]][0]+'</i><div><small>'+CAT[u[0]][1]+'</small>'+u[1]+'</div>');d.style.animationDelay=(n*30)+'ms';tl.appendChild(d);n++});
+  if(!n)tl.appendChild(el('div','empty','Politikada bu ifadeyle eşleşen bir kullanım yok. Emin değilsen en güvenli yol: öğretmenine sor.'));}
+tq.addEventListener('input',drawTL);
+$$('.chip').forEach(function(c){c.addEventListener('click',function(){var on=c.getAttribute('aria-pressed')==='true';
+  $$('.chip').forEach(function(x){x.setAttribute('aria-pressed','false')});tf=on?null:c.dataset.f;if(!on)c.setAttribute('aria-pressed','true');drawTL()})});
+drawTL();
+
+/* ---------- test ---------- */
+var qz={list:[],i:0,s:0};
+function shuffle(a){a=a.slice();for(var j=a.length-1;j>0;j--){var k=Math.floor(Math.random()*(j+1)),t=a[j];a[j]=a[k];a[k]=t}return a}
+function qStart(){var g=shuffle(USES.filter(function(u){return u[0]==='g'})).slice(0,2),y=shuffle(USES.filter(function(u){return u[0]==='y'})).slice(0,2),r=shuffle(USES.filter(function(u){return u[0]==='r'})).slice(0,2);
+  qz={list:shuffle(g.concat(y,r)),i:0,s:0};$('#yzp-q-b').style.display='';qShow()}
+function qShow(){var u=qz.list[qz.i];$('#yzp-q-n').textContent='Soru '+(qz.i+1)+' / '+qz.list.length;$('#yzp-q-s').textContent='Puan '+qz.s;
+  $('#yzp-q-t').textContent=u[1];$('#yzp-q-f').innerHTML='';$$('#yzp-q-b button').forEach(function(b){b.disabled=false;b.className=''})}
+$$('#yzp-q-b button').forEach(function(b){b.addEventListener('click',function(){var u=qz.list[qz.i],ok=b.dataset.a===u[0];if(ok)qz.s++;
+  $$('#yzp-q-b button').forEach(function(x){x.disabled=true;if(x.dataset.a===u[0])x.className='ok'});if(!ok)b.className='no';
+  $('#yzp-q-s').textContent='Puan '+qz.s;
+  var last=qz.i===qz.list.length-1;
+  $('#yzp-q-f').innerHTML='<strong>'+(ok?'Doğru. ':'Politikaya göre: ')+CAT[u[0]][1]+'.</strong> '+CAT[u[0]][2]+'<div style="margin-top:10px"><button class="btn yel" id="yzp-q-next">'+(last?'Sonucu gör':'Sonraki soru')+'</button></div>';
+  $('#yzp-q-next').addEventListener('click',function(){if(last){qEnd()}else{qz.i++;qShow()}});$('#yzp-q-next').focus()})});
+function qEnd(){var n=qz.list.length,m=qz.s===n?'Tam isabet! Sınırları iyi biliyorsun.':qz.s>=n-2?'İyi gidiyorsun. “Bunu yapabilir miyim?” listesine bir kez daha göz at.':'Listeyi birlikte yeniden inceleyelim; emin olmadığında öğretmenine sor.';
+  $('#yzp-q-n').textContent='Sonuç';$('#yzp-q-t').textContent=qz.s+' / '+n+' doğru';$('#yzp-q-b').style.display='none';
+  $('#yzp-q-f').innerHTML=m+'<div style="margin-top:10px"><button class="btn yel" id="yzp-q-re">Yeniden dene</button></div>';$('#yzp-q-re').addEventListener('click',qStart)}
+qStart();
+
+/* ---------- kontrol listesi ---------- */
+var ckl=$('#yzp-ck-l'),ans=[];
+CHECK.forEach(function(c,j){var li=el('li','','<span>'+c[0]+'</span><span class="yn"><button data-v="1" aria-pressed="false">Evet</button><button data-v="0" aria-pressed="false">Hayır</button></span><span class="why">'+c[2]+'</span>');
+  $$('button',li).forEach(function(b){b.addEventListener('click',function(){ans[j]=+b.dataset.v;$$('button',li).forEach(function(x){x.setAttribute('aria-pressed',x===b)});li.className=ans[j]===c[1]?'good':'bad';ckRes()})});ckl.appendChild(li)});
+function ckRes(){var done=0,good=0;CHECK.forEach(function(c,j){if(ans[j]!=null){done++;if(ans[j]===c[1])good++}});
+  $('#yzp-ck-p').style.width=(good/CHECK.length*100)+'%';
+  $('#yzp-ck-r').textContent=done<CHECK.length?(done+' / '+CHECK.length+' yanıtlandı'):good===CHECK.length?'✓ Hazırsın. Beyanını ekleyip çalışmanı teslim edebilirsin.':'Kırmızı satırları düzeltmeden teslim etme.';
+  $('#yzp-ck-r').style.color=done===CHECK.length?(good===CHECK.length?'var(--green)':'var(--red)'):''}
+$('#yzp-ck-x').addEventListener('click',function(){ans=[];$$('li',ckl).forEach(function(li){li.className='';$$('button',li).forEach(function(b){b.setAttribute('aria-pressed','false')})});ckRes()});
+
+/* ---------- beyan ---------- */
+function decl(){var t=$('#yzp-d-tool').value.trim()||'[araç adı]',w=$('#yzp-d-why').value,m=$('#yzp-d-me').value.trim()||'[özgün katkını yaz]';
+  $('#yzp-d-out').textContent='YAPAY ZEKÂ KULLANIM BEYANI\n\nBu çalışmada '+t+' adlı yapay zekâ aracından şu amaçla destek aldım: '+trl(w)+'.\n\nÖzgün katkım: '+m+'\n\nYapay zekânın verdiği bilgileri en az bir güvenilir kaynakla teyit ettim; kişisel veya gizli hiçbir bilgiyi sisteme girmedim. Nihai metin kendi ifadelerimden oluşmaktadır.'}
+['yzp-d-tool','yzp-d-why','yzp-d-me'].forEach(function(id){document.getElementById(id).addEventListener('input',decl)});decl();
+
+/* ---------- düzeyler + yönerge ---------- */
+var lv=$('#yzp-lv'),cur=2,beyan=1;
+LEVELS.forEach(function(L,j){var b=el('button','','<b>'+j+'</b><span>'+L.n+'</span>');b.style.setProperty('--lc',L.c);b.setAttribute('aria-label','Düzey '+j+': '+L.n);
+  b.addEventListener('click',function(){cur=j;drawLv()});lv.appendChild(b)});
+function drawLv(){var L=LEVELS[cur];$('#yzp-lvbox').style.setProperty('--lc',L.c);
+  $$('button',lv).forEach(function(b,j){b.setAttribute('aria-pressed',j===cur)});
+  $('#yzp-lv-h').textContent='Düzey '+cur+' · '+L.n;$('#yzp-lv-p').textContent=L.p;
+  $$('#yzp-lv-m i').forEach(function(m,j){m.className=j<=cur-1?'f':''});yon()}
+function yon(){var L=LEVELS[cur],d=$('#yzp-y-ders').value.trim(),o=$('#yzp-y-odev').value.trim();
+  $('#yzp-y-lv').textContent='Düzey '+cur+' · '+L.n;
+  $('#yzp-y-out').textContent=(d?d+'\n':'')+(o?o+'\n':'')+((d||o)?'\n':'')+'BU ÇALIŞMADA YAPAY ZEKÂ KULLANIMI\n\n☑ DÜZEY '+cur+' · '+L.n+'\n'+L.p.replace('Bu çalışmada yapay','Yapay').replace('; ancak nihai','; nihai')+'\n\nKullanım Beyanı: '+(beyan?'☑ Zorunludur':'☑ Gerekli değildir')+'\n\nHatırlatma: Hangi düzey seçilirse seçilsin, “Her Düzeyde Yasak Olan Kullanımlar” bölümündeki kurallar geçerlidir.'}
+segInit($('#yzp-y-b'),function(b){beyan=+b.dataset.b;yon()});
+['yzp-y-ders','yzp-y-odev'].forEach(function(id){document.getElementById(id).addEventListener('input',yon)});drawLv();
+$('#yzp-y-print').addEventListener('click',function(){document.body.classList.add('yzp-print');window.print();setTimeout(function(){document.body.classList.remove('yzp-print')},500)});
+
+/* ---------- kopyala ---------- */
+function toast(m){var t=$('#yzp-toast');t.textContent=m;t.classList.add('show');setTimeout(function(){t.classList.remove('show')},1800)}
+$$('[data-copy]').forEach(function(b){b.addEventListener('click',function(){var tx=document.getElementById(b.dataset.copy).textContent;
+  function fb(){var a=document.createElement('textarea');a.value=tx;document.body.appendChild(a);a.select();try{document.execCommand('copy');toast('Panoya kopyalandı')}catch(e){toast('Kopyalanamadı; metni elle seçin')}a.remove()}
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(tx).then(function(){toast('Panoya kopyalandı')},fb)}else fb()})});
+
+/* ---------- veli ---------- */
+var pqi=0,pq=$('#yzp-pq');function pqShow(){pq.textContent=PQ[pqi];pq.classList.remove('flip');void pq.offsetWidth;pq.classList.add('flip')}
+$('#yzp-pq-b').addEventListener('click',function(){pqi=(pqi+1)%PQ.length;pqShow()});pqShow();
+var dd=$('#yzp-dd');dd.appendChild(el('h4','rv','<span style="color:var(--green)">✓ Destekleyici yaklaşımlar</span>'));dd.appendChild(el('h4','rv','<span style="color:var(--red)">✗ Kaçınılması gerekenler</span>'));
+DD.forEach(function(d){dd.appendChild(el('div','card do rv','<b>'+d[0]+'</b><span>'+d[1]+'</span>'));dd.appendChild(el('div','card dont rv','<b>'+d[2]+'</b><span>'+d[3]+'</span>'))});
+if(window.matchMedia('(max-width:860px)').matches){/* mobilde: önce tüm destekleyiciler, sonra kaçınılacaklar */
+  var ks=[].slice.call(dd.children);dd.innerHTML='';[0,2,4,6,8,1,3,5,7,9].forEach(function(k){dd.appendChild(ks[k])})}
+
+/* ---------- adımlar ---------- */
+var sb=$('#yzp-steps'),sc=0;
+STEPS.forEach(function(s,j){var b=el('button','','<b>0'+(j+1)+'</b><span>'+s[0]+'</span>');b.addEventListener('click',function(){sc=j;drawSt()});sb.appendChild(b)});
+function drawSt(){$$('button',sb).forEach(function(b,j){b.className=j<=sc?'done':'';b.setAttribute('aria-pressed',j===sc)});
+  $('#yzp-step-b').innerHTML='<p><strong>'+STEPS[sc][0]+'.</strong> '+STEPS[sc][1]+'</p>'}
+drawSt();
+
+/* ---------- rol seçimi ---------- */
+$$('.role').forEach(function(b){b.addEventListener('click',function(){var r=b.dataset.role,S=SHORT[r];
+  $$('.role').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+  $('#yzp-short-t').textContent='kısayollar · '+S[0];
+  $('#yzp-short-c').innerHTML=S[1].map(function(c){return '<a href="'+c[0]+'"><b>'+c[1]+'</b><span>'+c[2]+'</span></a>'}).join('');
+  var sh=$('#yzp-short');sh.classList.remove('show');void sh.offsetWidth;sh.classList.add('show');
+  sh.scrollIntoView({behavior:'smooth',block:'start'})})});
+
+/* ---------- yumuşak kaydırma, etkin bölüm, ilerleme ---------- */
+R.addEventListener('click',function(e){var a=e.target.closest('a[href^="#yzp-"]');if(!a)return;var t=document.querySelector(a.getAttribute('href'));if(!t)return;
+  e.preventDefault();var s=t.closest('section')&&t.tagName!=='SECTION'?t:t;s.scrollIntoView({behavior:'smooth',block:t.tagName==='SECTION'?'start':'center'});if(t.focus&&/INPUT|SELECT/.test(t.tagName))setTimeout(function(){t.focus({preventScroll:true})},600)});
+var links=$$('.nav a'),secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))}),bar=$('#yzp-bar'),tick=false;
+function onScroll(){tick=false;var y=window.scrollY+140,on=-1;secs.forEach(function(s,j){if(s.getBoundingClientRect().top+window.scrollY<=y)on=j});
+  links.forEach(function(a,j){var w=j===on;if(w&&!a.classList.contains('on')){a.classList.add('on');var nw=a.parentNode;nw.scrollTo({left:a.offsetLeft-nw.clientWidth/2+a.clientWidth/2,behavior:'smooth'})}else if(!w)a.classList.remove('on')});
+  var r=R.getBoundingClientRect(),p=Math.min(1,Math.max(0,-r.top/(r.height-window.innerHeight)));bar.style.transform='scaleX('+p+')'}
+window.addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(onScroll)}},{passive:true});onScroll();
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});$$('.rv').forEach(function(n){io.observe(n)})}
+else $$('.rv').forEach(function(n){n.classList.add('in')});
+})();
+</script>
+</body>
+</html>
