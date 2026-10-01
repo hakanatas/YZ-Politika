@@ -718,8 +718,8 @@ function ckRes(){var done=0,good=0;CHECK.forEach(function(c,j){if(ans[j]!=null){
 $('#yzp-ck-x').addEventListener('click',function(){ans=[];$$('li',ckl).forEach(function(li){li.className='';$$('button',li).forEach(function(b){b.setAttribute('aria-pressed','false')})});ckRes()});
 
 /* ---------- beyan ---------- */
-function decl(){var t=$('#yzp-d-tool').value.trim()||'[araç adı]',w=$('#yzp-d-why').value,m=$('#yzp-d-me').value.trim()||'[özgün katkını yaz]';
-  $('#yzp-d-out').textContent='YAPAY ZEKÂ KULLANIM BEYANI\n\nBu çalışmada '+t+' adlı yapay zekâ aracından şu amaçla destek aldım: '+trl(w)+'.\n\nÖzgün katkım: '+m+'\n\nYapay zekânın verdiği bilgileri en az bir güvenilir kaynakla teyit ettim; kişisel veya gizli hiçbir bilgiyi sisteme girmedim. Nihai metin kendi ifadelerimden oluşmaktadır.'}
+function decl(){var t=$('#yzp-d-tool').value.trim()||'[araç adı]',w=$('#yzp-d-why').value,m=$('#yzp-d-me').value.trim();
+  $('#yzp-d-out').textContent='YAPAY ZEKÂ KULLANIM BEYANI\n\nBu çalışmada '+t+' adlı yapay zekâ aracından şu amaçla destek aldım: '+trl(w)+'.\n\n'+m+'\n\nYapay zekânın verdiği bilgileri en az bir güvenilir kaynakla teyit ettim; kişisel hiçbir bilgiyi sisteme girmedim. Nihai metin kendi ifadelerimden oluşmaktadır.'}
 ['yzp-d-tool','yzp-d-why','yzp-d-me'].forEach(function(id){document.getElementById(id).addEventListener('input',decl)});decl();
 
 /* ---------- düzeyler + yönerge ---------- */
